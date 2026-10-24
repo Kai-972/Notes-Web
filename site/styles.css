@@ -164,10 +164,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 .mark.pop i:nth-child(7) { animation: dotIn .5s cubic-bezier(.3, 1.4, .5, 1) calc(.05s + var(--i) * .08s) both, breathe 4s ease-in-out calc(.85s + var(--i) * .08s) infinite; }
 
 /* Hero */
-.hero { display: flex; flex-wrap: wrap; align-items: center; gap: 56px; padding-top: clamp(28px, 5vw, 64px); padding-bottom: clamp(64px, 8vw, 112px); }
-.hero-text { flex: 1 1 440px; min-width: 0; }
+.hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 56px clamp(56px, 7vw, 104px); padding-top: clamp(28px, 5vw, 64px); padding-bottom: clamp(64px, 8vw, 112px); }
+.hero-text { flex: 0 1 560px; min-width: 0; }
+@media (max-width: 1040px) { .hero-text { flex: 1 1 100%; } }
 .label { margin: 0 0 20px; font-size: 14px; color: var(--ink2); }
-h1 { margin: 0; font-size: clamp(54px, 8.4vw, 104px); line-height: 1.02; font-weight: 700; letter-spacing: -0.04em; text-wrap: balance; }
+h1 { margin: 0; font-size: clamp(54px, 8.4vw, 128px); line-height: 1.02; font-weight: 700; letter-spacing: -0.04em; text-wrap: balance; }
 .w { display: inline-block; animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; }
 .hdot {
   display: inline-block; width: 0.24em; height: 0.24em; margin-left: 0.09em; border-radius: 50%;
@@ -175,7 +176,7 @@ h1 { margin: 0; font-size: clamp(54px, 8.4vw, 104px); line-height: 1.02; font-we
   transform-origin: 50% 100%;
   animation: dropIn .95s cubic-bezier(.3, .6, .5, 1) .75s both, breathe 3.2s ease-in-out 1.9s infinite;
 }
-.lead { margin: 28px 0 0; max-width: 480px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: var(--ink2); text-wrap: pretty; }
+.lead { margin: 28px 0 0; max-width: 540px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: var(--ink2); text-wrap: pretty; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .meta { margin: 22px 0 0; font-size: 14px; color: var(--ink2); }
 .fu { animation: fadeUp 1s cubic-bezier(.2, .7, .2, 1) both; }
