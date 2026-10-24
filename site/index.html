@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300..800&amp;display=swap">
 <link rel="stylesheet" href="styles.css">
-<script>try{var m=localStorage.getItem('notes-mode');if(m==='light'||m==='dark')document.documentElement.dataset.theme=m}catch(e){}</script>
+<script>document.documentElement.className='js';try{var m=localStorage.getItem('notes-mode');if(m==='light'||m==='dark')document.documentElement.dataset.theme=m}catch(e){}</script>
 <script src="main.js" defer></script>
 </head>
 <body id="top">
@@ -81,6 +81,120 @@
         </span>
       </div>
     </div>
+  </section>
+
+  <section class="wrap sec" data-reveal>
+    <div class="year-head">
+      <div class="rv">
+        <p class="sl" style="margin-bottom:8px">a year of days</p>
+        <p class="year-count" data-year-count aria-live="polite">344 of 364 days with something done</p>
+      </div>
+      <div class="chips rv" role="group" aria-label="Show a goal" data-year-chips style="transition-delay:.1s" hidden>
+        <button class="chip" type="button" data-goal="-1" aria-pressed="true" style="--sw:var(--ink)"><span class="sw" aria-hidden="true"></span>everything</button>
+        <button class="chip" type="button" data-goal="0" aria-pressed="false" style="--sw:var(--g0)"><span class="sw" aria-hidden="true"></span>code</button>
+        <button class="chip" type="button" data-goal="1" aria-pressed="false" style="--sw:var(--g1)"><span class="sw" aria-hidden="true"></span>fitness</button>
+        <button class="chip" type="button" data-goal="2" aria-pressed="false" style="--sw:var(--g2)"><span class="sw" aria-hidden="true"></span>reading</button>
+        <button class="chip" type="button" data-goal="3" aria-pressed="false" style="--sw:var(--g3)"><span class="sw" aria-hidden="true"></span>writing</button>
+      </div>
+    </div>
+    <div class="year-grid" role="img" aria-label="A year of days as dots, 344 of 364 days with something done" data-year-grid></div>
+    <p class="year-note rv" style="transition-delay:.3s">Every dot is a day, and the glowing one is today. Tap a goal to see just that one, the way Review does.</p>
+  </section>
+
+  <section id="how" class="sec" data-reveal>
+    <div class="wrap">
+      <div class="rv sh">
+        <p class="sl">how it works</p>
+        <h2>Swipe between <span class="nb">three pages.</span></h2>
+        <p class="intro">No tabs and no menus to dig through. Today is where you tick things off, Notes is where you write, Review is where you look back.</p>
+      </div>
+      <div class="strip">
+        <figure class="step rv" style="transition-delay:.05s">
+          <div class="phone">
+            <img class="on-light" src="img/quiet-today-light.webp" width="780" height="1688" loading="lazy" alt="The Today page: habits, mood, tasks and the day line">
+            <img class="on-dark" src="img/quiet-today-dark.webp" width="780" height="1688" loading="lazy" alt="The Today page: habits, mood, tasks and the day line">
+          </div>
+          <figcaption>
+            <span class="pdots" aria-hidden="true"><i class="on"></i><i></i><i></i></span>
+            <b>Today</b>
+            <p class="step-d">Habits, mood and tasks, with the day line across the top. One tap to tick.</p>
+          </figcaption>
+        </figure>
+        <figure class="step rv" style="transition-delay:.18s">
+          <div class="phone">
+            <img class="on-light" src="img/quiet-notes-light.webp" width="780" height="1688" loading="lazy" alt="The Notes page: one page of writing for the day, with time chips">
+            <img class="on-dark" src="img/quiet-notes-dark.webp" width="780" height="1688" loading="lazy" alt="The Notes page: one page of writing for the day, with time chips">
+          </div>
+          <figcaption>
+            <span class="pdots" aria-hidden="true"><i></i><i class="on"></i><i></i></span>
+            <b>Notes</b>
+            <p class="step-d">One page for each day. Tap the clock and the time drops in right where you are typing.</p>
+          </figcaption>
+        </figure>
+        <figure class="step rv" style="transition-delay:.31s">
+          <div class="phone">
+            <img class="on-light" src="img/quiet-review-light.webp" width="780" height="1688" loading="lazy" alt="The Review page: a grid where every day is a dot">
+            <img class="on-dark" src="img/quiet-review-dark.webp" width="780" height="1688" loading="lazy" alt="The Review page: a grid where every day is a dot">
+          </div>
+          <figcaption>
+            <span class="pdots" aria-hidden="true"><i></i><i></i><i class="on"></i></span>
+            <b>Review</b>
+            <p class="step-d">Every day is a dot, one colour per goal. Three months, six, or the whole year.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec day" data-reveal>
+    <div class="rv sh">
+      <p class="sl">the day line</p>
+      <h2><span class="nb">Your whole day</span> <span class="nb">on one line.</span></h2>
+      <p class="intro">It runs from 06:00 to 02:00. Notes you stamp, tasks with a time and focus sessions all land on it, and a glowing dot shows where you are now.</p>
+    </div>
+    <div class="day-card rv">
+      <div class="day-top">
+        <span class="day-date">Sunday 18 October</span>
+        <div class="day-tools">
+          <span class="legend">
+            <span><i aria-hidden="true" style="width:6px;height:6px"></i>note</span>
+            <span><i aria-hidden="true" style="width:11px;height:11px"></i>task</span>
+            <span><i aria-hidden="true" style="width:18px;height:7px;border-radius:4px;background:var(--g0)"></i>focus</span>
+            <span><i aria-hidden="true" style="width:11px;height:11px;background:var(--acc);box-shadow:0 0 0 3px var(--soft)"></i>now</span>
+          </span>
+          <button class="btn-chip lift" type="button" data-day-replay hidden>
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/></svg>
+            Play the day again
+          </button>
+        </div>
+      </div>
+      <div class="trackbox">
+        <div class="dl" data-day-line role="img" aria-label="A day line from 06:00 to 02:00 with notes, a task, two focus sessions, the current time at 21:10 and a task coming up at 22:30">
+          <span class="dlp"></span>
+          <span class="dlf"></span>
+          <i class="tk M" style="--i:0"></i><i class="tk" style="--i:1"></i><i class="tk M" style="--i:2"></i><i class="tk" style="--i:3"></i><i class="tk M" style="--i:4"></i><i class="tk" style="--i:5"></i><i class="tk M" style="--i:6"></i>
+          <i class="tk" style="--i:7"></i><i class="tk M" style="--i:8"></i><i class="tk" style="--i:9"></i><i class="tk M" style="--i:10"></i><i class="tk" style="--i:11"></i><i class="tk M" style="--i:12"></i><i class="tk" style="--i:13"></i>
+          <i class="tk M" style="--i:14"></i><i class="tk" style="--i:15"></i><i class="tk M f" style="--i:16"></i><i class="tk f" style="--i:17"></i><i class="tk M f" style="--i:18"></i><i class="tk f" style="--i:19"></i><i class="tk M f" style="--i:20"></i>
+          <span class="hr" style="--i:0">06</span><span class="hr" style="--i:2">08</span><span class="hr" style="--i:4">10</span><span class="hr" style="--i:6">12</span><span class="hr" style="--i:8">14</span><span class="hr" style="--i:10">16</span>
+          <span class="hr" style="--i:12">18</span><span class="hr" style="--i:14">20</span><span class="hr" style="--i:16">22</span><span class="hr" style="--i:18">00</span><span class="hr" style="--i:20">02</span>
+          <span class="dm at" style="--h:7;--m:40;--s:6px"></span>
+          <span class="dbar at" style="--h:9;--m:30;--dur:50;background:var(--g0)"></span>
+          <span class="dm at" style="--h:13;--s:13px"></span>
+          <span class="dm at" style="--h:16;--m:5;--s:6px"></span>
+          <span class="dbar at" style="--h:18;--m:30;--dur:45;background:var(--g2)"></span>
+          <span class="dm next at" style="--h:22;--m:30;--s:13px"></span>
+          <span class="dln"></span>
+          <span class="dll up at" style="--h:7;--m:40"><small>07:40 · note</small><span>woke up slow, coffee first</span></span>
+          <span class="dll dn at" style="--h:9;--m:55;--d:calc((10 + 20 / 60 - 6) / 20 * 100 / var(--now) * 3.6s)"><small>focus · code</small><span>50 min</span></span>
+          <span class="dll up at" style="--h:13"><small>13:00 · done</small><span>call the bank</span></span>
+          <span class="dll dn at" style="--h:16;--m:5"><small>16:05 · note</small><span>gym, legs are gone</span></span>
+          <span class="dll up at" style="--h:18;--m:52.5;--d:calc((19 + 15 / 60 - 6) / 20 * 100 / var(--now) * 3.6s)"><small>focus · reading</small><span>45 min</span></span>
+          <span class="dll dn at" style="--h:21;--m:10;--d:3.6s"><small>now</small><span>21:10</span></span>
+          <span class="dll up at" style="--h:22;--m:30;--d:3.9s"><small>next · 22:30</small><span>read 20 pages</span></span>
+        </div>
+      </div>
+    </div>
+    <p class="day-note rv" style="transition-delay:.3s">Up past midnight? Anything before 04:00 still counts for the day you were living.</p>
   </section>
 </main>
 

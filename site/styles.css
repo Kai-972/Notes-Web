@@ -18,6 +18,10 @@
   --soft: #D9EDE0;
   --glass: rgba(239, 238, 234, 0.78);
   --card-edge: 0 1px 2px rgba(21, 21, 20, 0.05);
+  --g0: #3B5BDB;
+  --g1: #E0612A;
+  --g2: #8A55C9;
+  --g3: #C99A0E;
   --frame: 0 1px 2px rgba(21, 21, 20, 0.05), 0 30px 60px -24px rgba(21, 21, 20, 0.24);
 }
 
@@ -39,6 +43,10 @@
     --soft: #1E3A28;
     --glass: rgba(17, 17, 16, 0.78);
     --card-edge: 0 0 0 1px #2A2A28;
+    --g0: #7C93F0;
+    --g1: #F08A55;
+    --g2: #B08AE6;
+    --g3: #E6B93A;
     --frame: 0 0 0 1px #2A2A28, 0 30px 60px -24px rgba(0, 0, 0, 0.7);
   }
 }
@@ -60,6 +68,10 @@
   --soft: #1E3A28;
   --glass: rgba(17, 17, 16, 0.78);
   --card-edge: 0 0 0 1px #2A2A28;
+  --g0: #7C93F0;
+  --g1: #F08A55;
+  --g2: #B08AE6;
+  --g3: #E6B93A;
   --frame: 0 0 0 1px #2A2A28, 0 30px 60px -24px rgba(0, 0, 0, 0.7);
 }
 
@@ -174,6 +186,105 @@ h1.sm .hdot { width: 0.19em; height: 0.19em; margin-left: 0.07em; box-shadow: 0 
 .c1 { animation: cyc1 10.5s linear 1.8s infinite; }
 .c2 { animation: cyc2 10.5s linear 1.8s infinite; }
 .hero-phone:hover .p3, .hero-phone:hover .c0, .hero-phone:hover .c1, .hero-phone:hover .c2 { animation-play-state: paused; }
+
+/* Sections: one header for all of them (label, heading, intro), and the scroll reveal.
+   Content is only hidden when JS is on (the .js class), so with JS off everything just shows. */
+.sec { padding-bottom: clamp(88px, 11vw, 152px); }
+.sh { margin-bottom: clamp(32px, 4vw, 48px); }
+.sl { margin: 0 0 16px; font-size: 14px; color: var(--ink2); }
+h2 { margin: 0; font-size: clamp(36px, 4.8vw, 58px); line-height: 1.06; font-weight: 700; letter-spacing: -0.03em; text-wrap: balance; }
+.intro { margin: 20px 0 0; max-width: 680px; font-size: 18px; line-height: 1.55; color: var(--ink2); text-wrap: pretty; }
+.js .rv { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2, .7, .2, 1), transform .9s cubic-bezier(.2, .7, .2, 1); }
+.js .in .rv { opacity: 1; transform: none; }
+
+/* A year of days: 52 x 7 dots, filled column by column, today glows */
+.year-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 32px; margin-bottom: 24px; }
+.year-count { margin: 0; font-size: clamp(22px, 2.4vw, 28px); font-weight: 700; letter-spacing: -0.01em; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips[hidden] { display: none; }
+.chip { display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 0; border-radius: 22px; background: transparent; color: var(--ink); font-size: 15px; box-shadow: inset 0 0 0 1.5px var(--line); transition: background-color .3s ease, color .3s ease, transform .35s cubic-bezier(.2, .7, .2, 1); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); font-weight: 600; box-shadow: none; }
+.chip .sw { display: block; width: 9px; height: 9px; border-radius: 50%; background: var(--sw); }
+.chip[aria-pressed="true"] .sw { background: var(--on-ink); }
+.chip:hover { transform: translateY(-3px); }
+.chip:active { transform: scale(.97); }
+.year-grid { --c: var(--ink); display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, auto); grid-template-columns: repeat(52, minmax(0, 1fr)); gap: clamp(2px, 0.45vw, 6px); }
+.yd { display: block; aspect-ratio: 1; border-radius: 50%; opacity: 0; background: var(--empty); transition: background-color .55s ease calc(var(--col) * 7ms); }
+.yd[data-l="4"] { background: var(--c); }
+@supports (background: color-mix(in srgb, red 50%, transparent)) {
+  .yd[data-l="1"] { background: color-mix(in srgb, var(--c) 25%, transparent); }
+  .yd[data-l="2"] { background: color-mix(in srgb, var(--c) 45%, transparent); }
+  .yd[data-l="3"] { background: color-mix(in srgb, var(--c) 69%, transparent); }
+}
+@supports not (background: color-mix(in srgb, red 50%, transparent)) {
+  .yd[data-l="1"], .yd[data-l="2"], .yd[data-l="3"] { background: var(--c); }
+}
+.yd.today { background: var(--acc); --h0: 2px; --h1: 5px; }
+.in .yd { animation: dotIn .45s cubic-bezier(.3, 1.4, .5, 1) calc(var(--col) * 26ms + var(--row) * 14ms) both; }
+.in .yd.today { animation: dotIn .45s cubic-bezier(.3, 1.4, .5, 1) calc(var(--col) * 26ms + var(--row) * 14ms) both, breathe 3.2s ease-in-out calc(var(--col) * 26ms + var(--row) * 14ms + 600ms) infinite; }
+.year-note { margin: 18px 0 0; font-size: 15px; color: var(--ink2); }
+
+/* How it works: three phones. Spread to the content edges on desktop, a snap strip on phones. */
+.strip { display: flex; gap: 56px; justify-content: space-between; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 12px 12px 24px; margin: 0 -12px; }
+.strip::-webkit-scrollbar { display: none; }
+.strip > * { flex: 0 0 auto; scroll-snap-align: center; }
+@media (max-width: 1040px) { .strip { justify-content: flex-start; gap: 20px; } }
+.step { margin: 0; width: 281px; }
+.phone > img { width: 100%; height: 100%; vertical-align: top; }
+.step figcaption { margin-top: 24px; }
+.pdots { display: flex; gap: 7px; margin-bottom: 12px; }
+.pdots i { display: block; width: 8px; height: 8px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--ink2); }
+.pdots i.on { background: var(--ink); box-shadow: none; }
+.step b { display: block; font-size: 22px; }
+.step-d { margin: 6px 0 0; font-size: 16px; line-height: 1.5; color: var(--ink2); }
+
+/* The day line, 06:00 to 02:00. A time becomes a place with --h (hour; 24 and up is after midnight) and --m (minutes):
+   x = (h + m/60 - 6) / 20 of the width, the app's xOnDayLine() as percentages. The same x sets each mark's delay,
+   so the line reaches a mark just as it pops in. It plays once when the section is revealed; "off" resets it for a replay. */
+.day-card { border-radius: 28px; background: var(--card); box-shadow: var(--card-edge); padding: clamp(20px, 3vw, 36px); transition-delay: .12s; }
+.day-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin-bottom: 8px; }
+.day-date { font-size: 18px; font-weight: 700; }
+.day-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+.legend { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; font-size: 13px; color: var(--ink2); }
+.legend span { display: flex; align-items: center; gap: 7px; }
+.legend i { display: block; border-radius: 50%; background: var(--ink); }
+.btn-chip { display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 0; border-radius: 22px; background: var(--chip); color: var(--ink); font-size: 14px; font-weight: 600; }
+.btn-chip[hidden] { display: none; }
+.trackbox { overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
+.trackbox::-webkit-scrollbar { display: none; }
+.dl { --LY: 100px; --now: calc((21 + 10 / 60 - 6) / 20 * 100); position: relative; min-width: 980px; height: 210px; }
+.dl > * { position: absolute; }
+.dl .at { --x: calc((var(--h) + var(--m, 0) / 60 - 6) / 20 * 100); --d: calc(var(--x) / var(--now) * 3.6s); left: calc(var(--x) * 1%); }
+.dlp { left: 0; top: calc(var(--LY) - 1px); height: 2px; width: calc(var(--now) * 1%); border-radius: 1px; background: var(--ink2); }
+.dlf { left: calc(var(--now) * 1%); right: 0; top: calc(var(--LY) - 1px); height: 0; border-top: 2px dashed var(--faint); }
+.tk { left: calc(var(--i) * 5%); top: calc(var(--LY) - 5px); width: 1.5px; height: 11px; margin-left: -0.75px; border-radius: 1px; background: var(--ink2); }
+.tk.M { top: calc(var(--LY) - 8px); height: 17px; }
+.tk.f { background: var(--faint); }
+.hr { left: calc(var(--i) * 5%); top: 184px; transform: translateX(-50%); font-size: 12px; color: var(--ink2); }
+.dm { top: calc(var(--LY) - var(--s) / 2); width: var(--s); height: var(--s); margin-left: calc(var(--s) / -2); border-radius: 50%; background: var(--ink); }
+.dm.next { background: var(--card); box-shadow: inset 0 0 0 2px var(--ink2); --d: 3.8s; }
+.dbar { top: calc(var(--LY) - 4px); height: 8px; width: calc(var(--dur) / 60 / 20 * 100%); border-radius: 4px; transform-origin: left; }
+.dln { left: calc(var(--now) * 1%); top: calc(var(--LY) - 7px); width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: var(--acc); box-shadow: 0 0 0 6px var(--soft); --h0: 5px; --h1: 10px; }
+.dll { transform: translateX(-50%); text-align: center; white-space: nowrap; line-height: 1.35; }
+.dll.up { top: 30px; }
+.dll.dn { top: 124px; }
+.dll small { display: block; font-size: 12px; color: var(--ink2); }
+.dll span { display: block; font-size: 15px; color: var(--ink); }
+.day-note { margin: 18px 0 0; font-size: 15px; color: var(--ink2); }
+
+/* before it is revealed (and while "off") the line is empty; with JS off it simply shows the finished day */
+.js .day:not(.in) .dlp, .dl.off .dlp { width: 0; }
+.js .day:not(.in) :is(.dlf, .dm, .dbar, .dll, .dln), .dl.off :is(.dlf, .dm, .dbar, .dll, .dln) { opacity: 0; }
+.in .dl:not(.off) .dlp { animation: dlGrow 3.6s linear both; }
+.in .dl:not(.off) .dlf { animation: dlShow .8s ease 3.5s both; }
+.in .dl:not(.off) :is(.dm, .dbar) { animation: dlPop .5s cubic-bezier(.3, 1.5, .5, 1) var(--d) both; }
+.in .dl:not(.off) .dll { animation: dlLabel .6s ease var(--d) both; }
+.in .dl:not(.off) .dln { animation: dlMove 3.6s linear both, breathe 3.2s ease-in-out 3.7s infinite; }
+@keyframes dlGrow { from { width: 0; } to { width: calc(var(--now) * 1%); } }
+@keyframes dlMove { from { left: 0; } to { left: calc(var(--now) * 1%); } }
+@keyframes dlPop { 0% { opacity: 0; transform: scale(.2); } 70% { opacity: 1; transform: scale(1.3); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes dlLabel { from { opacity: 0; transform: translate(-50%, 6px); } to { opacity: 1; transform: translate(-50%, 0); } }
+@keyframes dlShow { from { opacity: 0; } to { opacity: 1; } }
 
 /* Footer */
 .foot { padding-top: 32px; padding-bottom: 48px; }
