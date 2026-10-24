@@ -1,5 +1,13 @@
-// Light/dark toggle, scroll reveal, and the year grid. Everything else on the site is CSS.
+// Light/dark toggle, scroll reveal, the year grid, a few demos and the skin switcher. Everything else on the site is CSS.
 // The inline script in each page's <head> applies a saved choice before first paint; this file handles clicks.
+
+// 'light' or 'dark' as the page shows it. data-theme is only set once the visitor has chosen (now or earlier);
+// until then the system decides, which is what prefers-color-scheme in the CSS follows too.
+function pageMode() {
+  const set = document.documentElement.dataset.theme;
+  if (set) return set;
+  try { return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; }
+}
 
 // Scroll reveal: each [data-reveal] section gets the class "in" once it is on screen, and the CSS does the rest.
 // IntersectionObserver hands us "this box crossed the viewport" without a scroll listener, so scrolling stays smooth.
@@ -126,6 +134,75 @@
   }
 })();
 
+// Skins: picking one sets data-skin and data-sm on the section and the CSS does the rest (paper, ink, heading font).
+// The other skins' fonts are not part of the page: they load as tiny subsets (only the letters used here) when the
+// section is about to come into view, so a visitor who never scrolls there never downloads them.
+(() => {
+  const section = document.querySelector('[data-skins]');
+  if (!section) return;
+  const list = section.querySelector('[data-skin-list]');
+  const modes = section.querySelector('[data-skin-modes]');
+  const note = section.querySelector('[data-skin-note]');
+  const images = section.querySelectorAll('img[data-s]');
+  const skinButtons = section.querySelectorAll('[data-skin-pick]');
+  const modeButtons = section.querySelectorAll('[data-skin-mode]');
+
+  // from here JS decides which preview shows, so the no-JS light/dark classes on the Quiet pair must go
+  images.forEach((img) => img.classList.remove('on-light', 'on-dark'));
+
+  let skin = 'q';
+  let chosen = null; // null: the preview follows the page's light or dark
+
+  function render(animate) {
+    const mode = chosen || pageMode();
+    section.dataset.skin = skin;
+    section.dataset.sm = mode;
+    images.forEach((img) => {
+      const show = img.dataset.s === skin && img.dataset.m === mode;
+      img.hidden = !show;
+      img.classList.remove('swap');
+      if (show && animate) { void img.offsetWidth; img.classList.add('swap'); }
+    });
+    skinButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.skinPick === skin)));
+    modeButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.skinMode === mode)));
+    note.hidden = skin === 'q';
+  }
+
+  list.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-skin-pick]');
+    if (!b || b.dataset.skinPick === skin) return;
+    skin = b.dataset.skinPick;
+    render(true);
+  });
+  modes.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-skin-mode]');
+    if (!b) return;
+    chosen = b.dataset.skinMode;
+    render(true);
+  });
+  // flipping the page's own light/dark takes the preview back to following it
+  document.addEventListener('notes:mode', () => { chosen = null; render(false); });
+
+  list.hidden = false;
+  modes.hidden = false;
+  render(false);
+
+  const FONTS = 'https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Caveat:wght@700&family=Bangers'
+    + '&family=Bricolage+Grotesque:wght@800&family=Big+Shoulders+Display:wght@900&display=swap&text='
+    + encodeURIComponent('One app, six tastes.ONE APP, SIX TASTES.QuietPebblesDiaryPanelsRisoPoster');
+  const loadFonts = () => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = FONTS;
+    document.head.appendChild(link);
+  };
+  if (!('IntersectionObserver' in window)) { loadFonts(); return; }
+  const io = new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) { loadFonts(); io.disconnect(); }
+  }, { rootMargin: '700px 0px' });
+  io.observe(section);
+})();
+
 // Not a game: four 30-day strips, seeded like the board. The "N of 30" counts in the HTML are what this produces.
 (() => {
   const strips = document.querySelectorAll('[data-strip]');
@@ -168,11 +245,7 @@
   const button = document.querySelector('[data-mode-toggle]');
   const metas = document.querySelectorAll('meta[name="theme-color"]');
 
-  const systemDark = () => {
-    try { return matchMedia('(prefers-color-scheme: dark)').matches; } catch (e) { return false; }
-  };
-  // data-theme is only set once the visitor has chosen (or chose earlier); otherwise the system decides.
-  const current = () => root.dataset.theme || (systemDark() ? 'dark' : 'light');
+  const current = pageMode;
 
   function paint(mode) {
     if (button) button.setAttribute('aria-label', mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
@@ -188,12 +261,13 @@
       root.dataset.theme = next;
       try { localStorage.setItem(KEY, next); } catch (e) { /* storage blocked: the choice just won't be remembered */ }
       paint(next);
+      document.dispatchEvent(new Event('notes:mode'));
     });
   }
 
   try {
     matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      if (!root.dataset.theme) paint(current());
+      if (!root.dataset.theme) { paint(current()); document.dispatchEvent(new Event('notes:mode')); }
     });
   } catch (e) { /* old browser: nothing to follow */ }
 })();

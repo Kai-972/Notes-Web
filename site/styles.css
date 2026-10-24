@@ -150,15 +150,16 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 .tog[hidden] { display: none; }
 
 /* The logo: seven dots tracing an n, the last one glowing. 22px box, dot r = 0.249 of the step. */
+.mark, .appicon { --step: 8.807px; --dia: 4.386px; --o: 0px; --halo: 2.083px; --h0: 1.535px; --h1: 3.289px; }
 .mark { position: relative; display: block; flex: none; width: 22px; height: 22px; }
-.mark i { position: absolute; left: calc(var(--c) * 8.807px); top: calc(var(--w) * 8.807px); width: 4.386px; height: 4.386px; border-radius: 50%; background: var(--ink); }
-.mark i:nth-child(1) { --c: 0; --w: 2; --i: 0; }
-.mark i:nth-child(2) { --c: 0; --w: 1; --i: 1; }
-.mark i:nth-child(3) { --c: 0; --w: 0; --i: 2; }
-.mark i:nth-child(4) { --c: 1; --w: 0; --i: 3; }
-.mark i:nth-child(5) { --c: 2; --w: 0; --i: 4; }
-.mark i:nth-child(6) { --c: 2; --w: 1; --i: 5; }
-.mark i:nth-child(7) { --c: 2; --w: 2; --i: 6; background: var(--acc); box-shadow: 0 0 0 2.083px var(--soft); --h0: 1.535px; --h1: 3.289px; }
+.mark i, .appicon i { position: absolute; left: calc(var(--o) + var(--c) * var(--step)); top: calc(var(--o) + var(--w) * var(--step)); width: var(--dia); height: var(--dia); border-radius: 50%; background: var(--ink); }
+.mark i:nth-child(1), .appicon i:nth-child(1) { --c: 0; --w: 2; --i: 0; }
+.mark i:nth-child(2), .appicon i:nth-child(2) { --c: 0; --w: 1; --i: 1; }
+.mark i:nth-child(3), .appicon i:nth-child(3) { --c: 0; --w: 0; --i: 2; }
+.mark i:nth-child(4), .appicon i:nth-child(4) { --c: 1; --w: 0; --i: 3; }
+.mark i:nth-child(5), .appicon i:nth-child(5) { --c: 2; --w: 0; --i: 4; }
+.mark i:nth-child(6), .appicon i:nth-child(6) { --c: 2; --w: 1; --i: 5; }
+.mark i:nth-child(7), .appicon i:nth-child(7) { --c: 2; --w: 2; --i: 6; background: var(--acc); box-shadow: 0 0 0 var(--halo) var(--soft); }
 .mark.pop i { animation: dotIn .5s cubic-bezier(.3, 1.4, .5, 1) calc(.05s + var(--i) * .08s) both; }
 .mark.pop i:nth-child(7) { animation: dotIn .5s cubic-bezier(.3, 1.4, .5, 1) calc(.05s + var(--i) * .08s) both, breathe 4s ease-in-out calc(.85s + var(--i) * .08s) infinite; }
 
@@ -185,6 +186,22 @@ h1.sm { font-size: clamp(34px, 9.5vw, 72px); line-height: 1; letter-spacing: -0.
 h1.sm .hdot { width: 0.19em; height: 0.19em; margin-left: 0.07em; box-shadow: 0 0 0 0.085em var(--soft); --h0: 0.07em; --h1: 0.15em; }
 .bar-plain { height: 80px; }
 .prose { margin: 28px 0 0; font-size: 18px; line-height: 1.6; color: var(--ink2); text-wrap: pretty; }
+
+/* The privacy page: plain words in a narrow column */
+.doc-date { margin: 20px 0 0; font-size: 15px; color: var(--ink2); }
+.tldr { margin-top: 40px; padding: clamp(20px, 3vw, 28px); border-radius: 24px; background: var(--card); box-shadow: var(--card-edge); }
+.tldr .sl { margin-bottom: 8px; }
+.tldr p:last-child { margin: 0; font-size: clamp(19px, 2vw, 22px); line-height: 1.5; font-weight: 500; }
+.doc { margin-top: 48px; }
+.doc.first { margin-top: 56px; }
+.doc h2 { font-size: 26px; line-height: 1.2; letter-spacing: -0.01em; }
+.doc p { margin: 12px 0 0; font-size: 17px; line-height: 1.65; color: var(--ink2); }
+.doc a { color: var(--ink); text-underline-offset: 4px; }
+.perms { margin-top: 16px; }
+.perm { display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 18px 0; box-shadow: inset 0 -1px 0 var(--line); }
+.perm:last-child { box-shadow: none; }
+.perm b { flex: 0 0 220px; font-size: 17px; font-weight: 600; }
+.perm span { flex: 1 1 280px; font-size: 17px; line-height: 1.6; color: var(--ink2); }
 
 /* The hero phone: three screens swipe by themselves, 3.5 s each. Pauses on hover. */
 .hero-phone { flex: 0 0 min(312px, 100%); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 22px; }
@@ -415,6 +432,87 @@ h2 { margin: 0; font-size: clamp(36px, 4.8vw, 58px); line-height: 1.06; font-wei
   .gd[data-l="1"], .gd[data-l="2"], .gd[data-l="3"] { background: var(--c); }
 }
 .gd.last { box-shadow: 0 0 0 2px var(--card), 0 0 0 3.5px var(--acc); }
+
+/* Skins: the whole section takes the picked skin's paper, ink and heading font. With JS off it is just Quiet in the page's own colours.
+   JS only sets data-skin (q b d z r p) and data-sm (light or dark) on the section; everything below follows from those two attributes. */
+.skins { --sk-paper: var(--paper); --sk-ink: var(--ink); --sk-ink2: var(--ink2); --sk-frame: var(--frame); --sk-font: 'Shantell Sans', cursive; --sk-hs: 1; --sk-hw: 700; --sk-ls: -0.03em; --sk-case: none;
+  padding: clamp(72px, 9vw, 120px) 0; background: var(--sk-paper); color: var(--sk-ink); transition: background-color .7s ease, color .7s ease; }
+.skins[data-sm="light"] { --sk-frame: 0 1px 2px rgba(0, 0, 0, 0.05), 0 30px 60px -24px rgba(0, 0, 0, 0.26); }
+.skins[data-sm="dark"] { --sk-frame: 0 0 0 1px color-mix(in srgb, var(--sk-ink) 15%, transparent), 0 30px 60px -24px rgba(0, 0, 0, 0.7); }
+.skins[data-skin="q"][data-sm="light"] { --sk-paper: #EFEEEA; --sk-ink: #151514; --sk-ink2: #6C6B66; }
+.skins[data-skin="q"][data-sm="dark"]  { --sk-paper: #111110; --sk-ink: #EDEDE8; --sk-ink2: #9A9993; }
+.skins[data-skin="b"][data-sm="light"] { --sk-paper: #E6EFEA; --sk-ink: #1C2A25; --sk-ink2: #52625B; }
+.skins[data-skin="b"][data-sm="dark"]  { --sk-paper: #0E1714; --sk-ink: #E6F1EB; --sk-ink2: #9DB0A6; }
+.skins[data-skin="d"][data-sm="light"] { --sk-paper: #F4F8FC; --sk-ink: #1F2B52; --sk-ink2: #5A6890; }
+.skins[data-skin="d"][data-sm="dark"]  { --sk-paper: #1B2622; --sk-ink: #EEF3E8; --sk-ink2: #A9B8AD; }
+.skins[data-skin="z"][data-sm="light"] { --sk-paper: #DCEBFB; --sk-ink: #161A2B; --sk-ink2: #4A5170; }
+.skins[data-skin="z"][data-sm="dark"]  { --sk-paper: #141726; --sk-ink: #F2EFE6; --sk-ink2: #B1B8D4; }
+.skins[data-skin="r"][data-sm="light"] { --sk-paper: #F3EEE2; --sk-ink: #14257A; --sk-ink2: #4A5A9E; }
+.skins[data-skin="r"][data-sm="dark"]  { --sk-paper: #14132B; --sk-ink: #FBEFD9; --sk-ink2: #B7B3D8; }
+.skins[data-skin="p"][data-sm="light"] { --sk-paper: #F2EFE8; --sk-ink: #101010; --sk-ink2: #6A675F; }
+.skins[data-skin="p"][data-sm="dark"]  { --sk-paper: #0C0C0C; --sk-ink: #F4F1EA; --sk-ink2: #9A978E; }
+.skins[data-skin="b"] { --sk-font: 'Fredoka', sans-serif; --sk-hs: 1.02; --sk-hw: 600; --sk-ls: 0; }
+.skins[data-skin="d"] { --sk-font: 'Caveat', cursive; --sk-hs: 1.32; --sk-hw: 700; --sk-ls: 0; }
+.skins[data-skin="z"] { --sk-font: 'Bangers', cursive; --sk-hs: 1.12; --sk-hw: 400; --sk-ls: 1px; }
+.skins[data-skin="r"] { --sk-font: 'Bricolage Grotesque', sans-serif; --sk-hs: 1; --sk-hw: 800; --sk-ls: -0.5px; }
+.skins[data-skin="p"] { --sk-font: 'Big Shoulders Display', sans-serif; --sk-hs: 1.22; --sk-hw: 900; --sk-ls: 0; --sk-case: uppercase; }
+.skins-in { display: flex; flex-wrap: wrap; align-items: center; gap: 56px 80px; }
+.skins-text { flex: 1 1 400px; min-width: 0; }
+.skins .sl, .skins .intro { color: var(--sk-ink2); }
+.skins h2 { font-family: var(--sk-font); font-size: calc(clamp(36px, 4.8vw, 58px) * var(--sk-hs)); font-weight: var(--sk-hw); letter-spacing: var(--sk-ls); text-transform: var(--sk-case); color: var(--sk-ink); }
+.skins .intro { max-width: 460px; margin-bottom: 32px; }
+.sk-list { display: flex; flex-direction: column; gap: 8px; max-width: 520px; }
+.sk-list[hidden], .sk-modes[hidden] { display: none; }
+.sk-b { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; min-height: 68px; padding: 12px 16px 12px 20px; border: 0; border-radius: 22px; background: transparent; color: var(--sk-ink); text-align: left;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--sk-ink) 14%, transparent); transition: background-color .4s ease, box-shadow .4s ease, transform .3s cubic-bezier(.2, .7, .2, 1); }
+.sk-b[aria-pressed="true"] { background: rgba(255, 255, 255, 0.7); box-shadow: 0 0 0 2px var(--sk-ink); transform: translateX(6px); }
+.skins[data-sm="dark"] .sk-b[aria-pressed="true"] { background: rgba(255, 255, 255, 0.07); }
+.sk-t { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0; }
+.sk-n { font-family: var(--f); font-size: var(--fs); font-weight: var(--fw); letter-spacing: var(--fl); line-height: 1.15; }
+.sk-d { font-size: 14px; color: var(--sk-ink2); }
+.sk-s { flex: 0 0 auto; padding: 5px 12px; border-radius: 14px; font-size: 13px; color: var(--sk-ink2); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--sk-ink) 25%, transparent); }
+.sk-s.live { background: var(--sk-ink); color: var(--sk-paper); font-weight: 600; box-shadow: none; }
+.sk-side { flex: 0 0 auto; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; width: min(312px, 100%); transition-delay: .15s; }
+.skins .phone { box-shadow: var(--sk-frame); background: var(--sk-paper); }
+.sk-img.swap { animation: swapIn .55s cubic-bezier(.2, .7, .2, 1) both; }
+.sk-modes { display: flex; gap: 4px; padding: 4px; border-radius: 24px; background: color-mix(in srgb, var(--sk-ink) 8%, transparent); }
+.sk-modes button { height: 40px; min-width: 76px; padding: 0 18px; border: 0; border-radius: 20px; background: transparent; color: var(--sk-ink2); font-size: 15px; transition: background-color .3s ease; }
+.sk-modes button[aria-pressed="true"] { background: var(--sk-paper); color: var(--sk-ink); font-weight: 600; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+.sk-note { margin: -8px 0 0; font-size: 13px; color: var(--sk-ink2); text-align: center; }
+.sk-note[hidden] { display: none; }
+.skins a:focus-visible, .skins button:focus-visible { outline-color: var(--sk-ink); }
+@keyframes swapIn { from { opacity: 0; transform: translateY(16px) scale(.97); } to { opacity: 1; transform: none; } }
+
+/* It stays on your phone: three points, each with a rule that draws left to right */
+.priv { padding-top: clamp(88px, 11vw, 152px); }
+.three { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px 48px; }
+.rule { display: block; height: 2px; background: var(--ink); }
+.js .rule { transform: scaleX(0); transform-origin: left; transition: transform 1.1s cubic-bezier(.2, .7, .2, 1); }
+.js .in .rule { transform: scaleX(1); }
+.point { padding-top: 20px; }
+.point b { display: block; font-size: 21px; }
+.point span { display: block; margin-top: 8px; font-size: 16px; line-height: 1.55; color: var(--ink2); }
+.priv-link { margin: 40px 0 0; font-size: 16px; }
+.priv-link a { color: var(--ink); text-underline-offset: 4px; }
+
+/* Get it: the download card */
+.get-card { display: flex; flex-wrap: wrap; gap: 48px 64px; border-radius: 32px; background: var(--card); box-shadow: var(--card-edge); padding: clamp(24px, 5vw, 64px); }
+.get-l { flex: 1 1 340px; min-width: 0; }
+.get-r { flex: 1 1 380px; min-width: 0; }
+.appicon { position: relative; display: block; width: 76px; height: 76px; border-radius: 19px; background: var(--paper); box-shadow: 0 0 0 1px var(--line); --step: 15.58px; --dia: 7.752px; --o: 18.545px; --halo: 3.68px; }
+.js .appicon i { opacity: 0; }
+.js .in .appicon i { animation: dotIn .5s cubic-bezier(.3, 1.4, .5, 1) calc(.35s + var(--i) * .09s) both; }
+.get-l h2 { margin-top: 28px; }
+.get-meta { margin: 16px 0 0; font-size: 16px; color: var(--ink2); }
+.btn-xl { height: 56px; margin-top: 28px; padding: 0 28px; font-size: 17px; }
+.get-sha { margin: 20px 0 0; font-size: 13px; line-height: 1.5; color: var(--ink2); }
+.get-sha code { display: block; margin-top: 2px; font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 12px; word-break: break-all; color: var(--ink); }
+.get-note { margin: 20px 0 0; font-size: 15px; line-height: 1.5; color: var(--ink2); }
+.steps { margin: 0; padding: 0; list-style: none; }
+.steps li { display: flex; gap: 16px; padding: 16px 0; box-shadow: inset 0 -1px 0 var(--line); font-size: 16px; line-height: 1.55; }
+.steps li:last-child { box-shadow: none; }
+.steps i { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--ink); font-style: normal; font-size: 14px; font-weight: 700; }
+.update-note { margin: 20px 0 0; padding: 16px 18px; border-radius: 18px; background: var(--chip); font-size: 15px; line-height: 1.55; color: var(--ink2); }
 
 /* Footer */
 .foot { padding-top: 32px; padding-bottom: 48px; }
