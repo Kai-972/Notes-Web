@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>notes, privacy</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300..800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+*{box-sizing:border-box}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:clamp(16px,4vw,40px);padding-right:clamp(16px,4vw,40px)}
+.col{width:100%;max-width:720px;margin:0 auto;padding-left:clamp(16px,4vw,40px);padding-right:clamp(16px,4vw,40px)}
+.hide-sm{display:inline}
+@media (max-width:520px){.hide-sm{display:none}}
+.lift{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.lift:hover{transform:translateY(-3px)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes dotIn{0%{opacity:0;transform:scale(.2)}70%{opacity:1;transform:scale(1.2)}100%{opacity:1;transform:scale(1)}}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 var(--h0) var(--soft)}50%{box-shadow:0 0 0 var(--h1) var(--soft)}}
+.fu{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
+.md{animation:dotIn .5s cubic-bezier(.3,1.4,.5,1) both}
+.md.glow{animation:dotIn .5s cubic-bezier(.3,1.4,.5,1) both,breathe 4s ease-in-out infinite}
+.hdot{animation:dotIn .7s cubic-bezier(.3,1.6,.5,1) .5s both,breathe 3.2s ease-in-out 1.3s infinite}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+</style>
+</helmet>
+<div style="width:100%;min-height:100vh;background:{{t.paper}};color:{{t.ink}};font-family:'Shantell Sans','Comic Sans MS',system-ui,sans-serif">
+
+  <header class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px;height:80px">
+    <a href="Main.dc.html" style="display:flex;align-items:center;gap:12px;text-decoration:none">
+      <span aria-hidden="true" style="position:relative;display:block;width:22px;height:22px"><sc-for list="{{navMark}}" as="d" hint-placeholder-count="7"><span class="{{d.cls}}" style="{{d.st}}"></span></sc-for></span>
+      <span style="font-size:24px;font-weight:700;letter-spacing:-0.5px">notes</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="Main.dc.html" class="hide-sm" style="margin-right:12px;font-size:16px;text-decoration:none;color:{{t.ink2}}">Home</a>
+      <button class="lift" onClick="{{toggleMode}}" aria-label="{{modeLabel}}" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:22px;border:0;background:{{t.card}};color:{{t.ink}};{{t.cardEdge}}">
+        <sc-if value="{{dark}}" hint-placeholder-val="{{false}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg></sc-if>
+        <sc-if value="{{light}}" hint-placeholder-val="{{true}}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg></sc-if>
+      </button>
+      <a href="Main.dc.html#get" style="display:flex;align-items:center;height:44px;padding:0 20px;border-radius:22px;background:{{t.ink}};color:{{t.onInk}};text-decoration:none;font-size:15px;font-weight:600;white-space:nowrap">Get the app</a>
+    </div>
+  </header>
+
+  <main class="col" style="padding-top:clamp(40px,7vw,88px);padding-bottom:clamp(72px,9vw,120px)">
+    <p class="fu" style="margin:0 0 16px;font-size:14px;color:{{t.ink2}}">privacy</p>
+    <h1 class="fu" style="animation-delay:.08s;margin:0;font-size:clamp(44px,6.4vw,72px);line-height:1;font-weight:700;letter-spacing:-0.035em">What notes knows about you<span class="hdot" aria-hidden="true" style="display:inline-block;width:0.19em;height:0.19em;margin-left:0.07em;border-radius:50%;background:{{t.acc}};--soft:{{t.soft}};--h0:0.07em;--h1:0.15em;box-shadow:0 0 0 0.085em {{t.soft}}"></span></h1>
+    <p style="margin:20px 0 0;font-size:15px;color:{{t.ink2}}">Last updated 19 October 2026</p>
+
+    <div class="fu" style="animation-delay:.25s;margin-top:40px;padding:clamp(20px,3vw,28px);border-radius:24px;background:{{t.card}};{{t.cardEdge}}">
+      <p style="margin:0 0 8px;font-size:14px;color:{{t.ink2}}">the short version</p>
+      <p style="margin:0;font-size:clamp(19px,2vw,22px);line-height:1.5;font-weight:500">notes has no account, no server and no analytics. What you put in it stays on your phone, unless you export it yourself.</p>
+    </div>
+
+    <section class="fu" style="animation-delay:0.43s;margin-top:56px">
+      <h2 style="margin:0;font-size:26px;font-weight:700;letter-spacing:-0.01em">What it stores</h2>
+      <p style="margin:12px 0 0;font-size:17px;line-height:1.65;color:{{t.ink2}}">Your goals, habits and ticks, mood, tasks, notes, focus sessions and settings. They live in one database inside the app's own storage on your phone. Nobody else can see them, me included.</p>
+    </section>
+
+    <section class="fu" style="animation-delay:0.51s;margin-top:48px">
+      <h2 style="margin:0;font-size:26px;font-weight:700;letter-spacing:-0.01em">What leaves your phone</h2>
+      <p style="margin:12px 0 0;font-size:17px;line-height:1.65;color:{{t.ink2}}">Nothing, on its own. There is no server for it to talk to, and it sends no analytics or crash reports. A backup only leaves your phone when you export one and pick where it goes: a chat, your drive, a cable to your laptop.</p>
+    </section>
+
+    <section class="fu" style="animation-delay:0.59s;margin-top:48px">
+      <h2 style="margin:0;font-size:26px;font-weight:700;letter-spacing:-0.01em">Permissions it asks for</h2>
+      <div style="margin-top:16px">
+        <div style="display:flex;flex-wrap:wrap;gap:4px 24px;padding:18px 0;box-shadow:inset 0 -1px 0 {{t.line}}">
+          <span style="flex:0 0 220px;font-size:17px;font-weight:600">Notifications</span>
+          <span style="flex:1 1 280px;font-size:17px;line-height:1.6;color:{{t.ink2}}">For reminders and the running focus timer. Asked the first time you turn a reminder on, not before.</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px 24px;padding:18px 0;box-shadow:inset 0 -1px 0 {{t.line}}">
+          <span style="flex:0 0 220px;font-size:17px;font-weight:600">Alarms &amp; reminders</span>
+          <span style="flex:1 1 280px;font-size:17px;line-height:1.6;color:{{t.ink2}}">So a reminder arrives on the exact minute, even with the app closed.</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px 24px;padding:18px 0">
+          <span style="flex:0 0 220px;font-size:17px;font-weight:600">Files</span>
+          <span style="flex:1 1 280px;font-size:17px;line-height:1.6;color:{{t.ink2}}">None. Importing a backup uses Android's file picker, so the app only sees the one file you choose.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="fu" style="animation-delay:0.67s;margin-top:48px">
+      <h2 style="margin:0;font-size:26px;font-weight:700;letter-spacing:-0.01em">Deleting it</h2>
+      <p style="margin:12px 0 0;font-size:17px;line-height:1.65;color:{{t.ink2}}">Settings, then Data, then Erase everything wipes it all on the spot. Uninstalling the app deletes it too. Export a backup first if you want to keep anything.</p>
+    </section>
+
+    <section class="fu" style="animation-delay:0.75s;margin-top:48px">
+      <h2 style="margin:0;font-size:26px;font-weight:700;letter-spacing:-0.01em">This website</h2>
+      <p style="margin:12px 0 0;font-size:17px;line-height:1.65;color:{{t.ink2}}">No cookies, no trackers, no analytics. Downloading the app is a plain file download.</p>
+    </section>
+
+    <section class="fu" style="animation-delay:0.83s;margin-top:48px">
+      <h2 style="margin:0;font-size:26px;font-weight:700;letter-spacing:-0.01em">Changes and questions</h2>
+      <p style="margin:12px 0 0;font-size:17px;line-height:1.65;color:{{t.ink2}}">If any of this changes, the date at the top changes with it. Questions go to [your email].</p>
+    </section>
+  </main>
+
+  <footer class="wrap" style="padding-bottom:48px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:32px;box-shadow:inset 0 1px 0 {{t.line}}">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span aria-hidden="true" style="position:relative;display:block;width:22px;height:22px"><sc-for list="{{navMark}}" as="d" hint-placeholder-count="7"><span style="{{d.st}}"></span></sc-for></span>
+        <span style="font-size:15px;color:{{t.ink2}}">I made notes for myself, then shared it with friends. Kai, 2026.</span>
+      </div>
+      <nav aria-label="Footer" style="display:flex;gap:24px;font-size:15px">
+        <a href="Main.dc.html" style="color:{{t.ink2}};text-decoration:none">Home</a>
+        <a href="Main.dc.html#get" style="color:{{t.ink2}};text-decoration:none">Download</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":1440,"height":2200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { mode: null };
+  }
+  colours(dark) {
+    return dark
+      ? { paper: '#111110', card: '#1C1C1B', ink: '#EDEDE8', ink2: '#9A9993', line: '#2A2A28', onInk: '#111110', acc: '#4CC77A', soft: '#1E3A28', cardEdge: 'box-shadow:0 0 0 1px #2A2A28' }
+      : { paper: '#EFEEEA', card: '#FFFFFF', ink: '#151514', ink2: '#6C6B66', line: '#E9E8E3', onInk: '#FFFFFF', acc: '#2F9E5A', soft: '#D9EDE0', cardEdge: 'box-shadow:0 1px 2px rgba(21,21,20,0.05)' };
+  }
+  renderVals() {
+    const mode = this.state.mode ?? this.props.mode ?? 'light';
+    const dark = mode === 'dark';
+    const P = this.colours(dark);
+    const s = 22 / 2.498, r = s * 0.249;
+    const pts = [[0, 2], [0, 1], [0, 0], [1, 0], [2, 0], [2, 1], [2, 2]];
+    const navMark = pts.map(([c, w], i) => {
+      const last = i === pts.length - 1;
+      const d = 0.05 + i * 0.08;
+      return {
+        cls: last ? 'md glow' : 'md',
+        st: 'position:absolute;left:' + (c * s).toFixed(2) + 'px;top:' + (w * s).toFixed(2) + 'px;width:' + (2 * r).toFixed(2) + 'px;height:' + (2 * r).toFixed(2) + 'px;border-radius:50%;background:' + (last ? P.acc : P.ink) + (last ? ';box-shadow:0 0 0 ' + (r * 0.95).toFixed(2) + 'px ' + P.soft + ';--soft:' + P.soft + ';--h0:' + (r * 0.7).toFixed(2) + 'px;--h1:' + (r * 1.5).toFixed(2) + 'px' : '') + ';animation-delay:' + d.toFixed(2) + 's' + (last ? ',' + (d + 0.8).toFixed(2) + 's' : '')
+      };
+    });
+    return {
+      t: P, dark, light: !dark, navMark,
+      modeLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleMode: () => this.setState({ mode: dark ? 'light' : 'dark' })
+    };
+  }
+}
+</script>
+</body>
+</html>
