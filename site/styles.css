@@ -1,0 +1,203 @@
+/* notes site. Values come from the app's tokens (Quiet) and design/site/Main.dc.html.
+   Light is the default; dark follows the system, and data-theme (set by main.js) overrides both. */
+
+:root {
+  color-scheme: light;
+  --paper: #EFEEEA;
+  --page: #FBFBF9;
+  --card: #FFFFFF;
+  --sel: #F5F4F1;
+  --ink: #151514;
+  --ink2: #6C6B66;
+  --line: #E9E8E3;
+  --faint: #CFCEC8;
+  --empty: #E6E5E0;
+  --chip: #E6E5E0;
+  --on-ink: #FFFFFF;
+  --acc: #2F9E5A;
+  --soft: #D9EDE0;
+  --glass: rgba(239, 238, 234, 0.78);
+  --card-edge: 0 1px 2px rgba(21, 21, 20, 0.05);
+  --frame: 0 1px 2px rgba(21, 21, 20, 0.05), 0 30px 60px -24px rgba(21, 21, 20, 0.24);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #111110;
+    --page: #161615;
+    --card: #1C1C1B;
+    --sel: #242422;
+    --ink: #EDEDE8;
+    --ink2: #9A9993;
+    --line: #2A2A28;
+    --faint: #4A4944;
+    --empty: #2A2A28;
+    --chip: #262624;
+    --on-ink: #111110;
+    --acc: #4CC77A;
+    --soft: #1E3A28;
+    --glass: rgba(17, 17, 16, 0.78);
+    --card-edge: 0 0 0 1px #2A2A28;
+    --frame: 0 0 0 1px #2A2A28, 0 30px 60px -24px rgba(0, 0, 0, 0.7);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #111110;
+  --page: #161615;
+  --card: #1C1C1B;
+  --sel: #242422;
+  --ink: #EDEDE8;
+  --ink2: #9A9993;
+  --line: #2A2A28;
+  --faint: #4A4944;
+  --empty: #2A2A28;
+  --chip: #262624;
+  --on-ink: #111110;
+  --acc: #4CC77A;
+  --soft: #1E3A28;
+  --glass: rgba(17, 17, 16, 0.78);
+  --card-edge: 0 0 0 1px #2A2A28;
+  --frame: 0 0 0 1px #2A2A28, 0 30px 60px -24px rgba(0, 0, 0, 0.7);
+}
+
+/* Things that exist twice, one per mode (phone screens, toggle icons). */
+.on-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .on-light { display: none; }
+  :root:not([data-theme="light"]) .on-dark { display: revert; }
+}
+:root[data-theme="dark"] .on-light { display: none; }
+:root[data-theme="dark"] .on-dark { display: revert; }
+
+/* Base */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Shantell Sans', 'Comic Sans MS', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  transition: background-color .5s ease, color .5s ease;
+}
+a { color: inherit; }
+button { font-family: inherit; cursor: pointer; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding-left: clamp(16px, 4vw, 40px); padding-right: clamp(16px, 4vw, 40px); }
+.nb { display: inline-block; white-space: nowrap; }
+
+/* Pill buttons: 44px minimum, 54px in the hero */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  height: 44px; padding: 0 20px; border: 0; border-radius: 999px;
+  font-size: 15px; font-weight: 600; text-decoration: none; white-space: nowrap;
+}
+.btn-lg { height: 54px; padding: 0 26px; font-size: 17px; }
+.btn-ink { background: var(--ink); color: var(--on-ink); }
+.btn-ring { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--faint); }
+.lift { transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
+.lift:hover { transform: translateY(-3px); }
+.lift:active { transform: scale(.97); }
+.bob:hover svg { animation: bob .9s ease-in-out infinite; }
+
+/* Nav */
+.nav { position: sticky; top: 0; z-index: 20; background: var(--glass); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 76px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand b { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+.bar-end { display: flex; align-items: center; gap: 12px; }
+.navlinks { display: flex; align-items: center; gap: 28px; margin-right: 12px; font-size: 16px; }
+.navlinks a { position: relative; text-decoration: none; color: var(--ink2); }
+.navlinks a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 1.5px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
+.navlinks a:hover::after { transform: scaleX(1); }
+@media (max-width: 760px) { .navlinks { display: none; } }
+.tog { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: var(--card); color: var(--ink); box-shadow: var(--card-edge); }
+.tog[hidden] { display: none; }
+
+/* The logo: seven dots tracing an n, the last one glowing. 22px box, dot r = 0.249 of the step. */
+.mark { position: relative; display: block; flex: none; width: 22px; height: 22px; }
+.mark i { position: absolute; left: calc(var(--c) * 8.807px); top: calc(var(--w) * 8.807px); width: 4.386px; height: 4.386px; border-radius: 50%; background: var(--ink); }
+.mark i:nth-child(1) { --c: 0; --w: 2; --i: 0; }
+.mark i:nth-child(2) { --c: 0; --w: 1; --i: 1; }
+.mark i:nth-child(3) { --c: 0; --w: 0; --i: 2; }
+.mark i:nth-child(4) { --c: 1; --w: 0; --i: 3; }
+.mark i:nth-child(5) { --c: 2; --w: 0; --i: 4; }
+.mark i:nth-child(6) { --c: 2; --w: 1; --i: 5; }
+.mark i:nth-child(7) { --c: 2; --w: 2; --i: 6; background: var(--acc); box-shadow: 0 0 0 2.083px var(--soft); --h0: 1.535px; --h1: 3.289px; }
+.mark.pop i { animation: dotIn .5s cubic-bezier(.3, 1.4, .5, 1) calc(.05s + var(--i) * .08s) both; }
+.mark.pop i:nth-child(7) { animation: dotIn .5s cubic-bezier(.3, 1.4, .5, 1) calc(.05s + var(--i) * .08s) both, breathe 4s ease-in-out calc(.85s + var(--i) * .08s) infinite; }
+
+/* Hero */
+.hero { display: flex; flex-wrap: wrap; align-items: center; gap: 56px; padding-top: clamp(28px, 5vw, 64px); padding-bottom: clamp(64px, 8vw, 112px); }
+.hero-text { flex: 1 1 440px; min-width: 0; }
+.label { margin: 0 0 20px; font-size: 14px; color: var(--ink2); }
+h1 { margin: 0; font-size: clamp(54px, 8.4vw, 104px); line-height: 1.02; font-weight: 700; letter-spacing: -0.04em; text-wrap: balance; }
+.w { display: inline-block; animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; }
+.hdot {
+  display: inline-block; width: 0.24em; height: 0.24em; margin-left: 0.09em; border-radius: 50%;
+  background: var(--acc); box-shadow: 0 0 0 0.11em var(--soft); --h0: 0.09em; --h1: 0.17em;
+  transform-origin: 50% 100%;
+  animation: dropIn .95s cubic-bezier(.3, .6, .5, 1) .75s both, breathe 3.2s ease-in-out 1.9s infinite;
+}
+.lead { margin: 28px 0 0; max-width: 480px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.55; color: var(--ink2); text-wrap: pretty; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.meta { margin: 22px 0 0; font-size: 14px; color: var(--ink2); }
+.fu { animation: fadeUp 1s cubic-bezier(.2, .7, .2, 1) both; }
+
+/* Pages after Home: a narrow column and a smaller headline with the same full-stop dot */
+.col { width: 100%; max-width: 720px; margin: 0 auto; padding: clamp(40px, 7vw, 88px) clamp(16px, 4vw, 40px) clamp(72px, 9vw, 120px); }
+h1.sm { font-size: clamp(34px, 9.5vw, 72px); line-height: 1; letter-spacing: -0.035em; }
+h1.sm .hdot { width: 0.19em; height: 0.19em; margin-left: 0.07em; box-shadow: 0 0 0 0.085em var(--soft); --h0: 0.07em; --h1: 0.15em; }
+.bar-plain { height: 80px; }
+.prose { margin: 28px 0 0; font-size: 18px; line-height: 1.6; color: var(--ink2); text-wrap: pretty; }
+
+/* The hero phone: three screens swipe by themselves, 3.5 s each. Pauses on hover. */
+.hero-phone { flex: 0 0 min(312px, 100%); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+.phone { width: 100%; aspect-ratio: 312 / 675; border-radius: 11%/5.1%; overflow: hidden; background: var(--paper); box-shadow: var(--frame); transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
+.phone:hover { transform: translateY(-10px) rotate(-0.8deg); }
+.p3 { display: flex; width: 300%; height: 100%; animation: pager 10.5s cubic-bezier(.65, 0, .35, 1) 1.8s infinite; }
+.p3 img { flex: none; width: 33.3333%; height: 100%; display: block; }
+.caption { display: flex; align-items: center; gap: 14px; }
+.dots { display: flex; gap: 9px; }
+.dots span { position: relative; width: 9px; height: 9px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--ink2); }
+.dots b { position: absolute; inset: 0; border-radius: 50%; background: var(--ink); }
+.names { position: relative; display: block; width: 70px; height: 20px; font-size: 15px; color: var(--ink2); }
+.names span { position: absolute; left: 0; top: 0; }
+.c1 { opacity: 0; }
+.c2 { opacity: 0; }
+.c0 { animation: cyc0 10.5s linear 1.8s infinite; }
+.c1 { animation: cyc1 10.5s linear 1.8s infinite; }
+.c2 { animation: cyc2 10.5s linear 1.8s infinite; }
+.hero-phone:hover .p3, .hero-phone:hover .c0, .hero-phone:hover .c1, .hero-phone:hover .c2 { animation-play-state: paused; }
+
+/* Footer */
+.foot { padding-top: 32px; padding-bottom: 48px; }
+.foot-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding-top: 32px; box-shadow: inset 0 1px 0 var(--line); }
+.foot-note { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--ink2); }
+.foot nav { display: flex; gap: 24px; font-size: 15px; }
+.foot nav a { color: var(--ink2); text-decoration: none; }
+
+/* Keyframes, copied from the board */
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+@keyframes rise { from { opacity: 0; transform: translateY(0.5em); } to { opacity: 1; transform: none; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes dotIn { 0% { opacity: 0; transform: scale(.2); } 70% { opacity: 1; transform: scale(1.2); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes dropIn { 0% { opacity: 0; transform: translateY(-0.9em) scale(.7); } 45% { opacity: 1; transform: translateY(0) scale(1.14, .84); } 65% { transform: translateY(-0.14em) scale(.96, 1.06); } 82% { transform: translateY(0) scale(1.03, .97); } 100% { opacity: 1; transform: none; } }
+@keyframes breathe { 0%, 100% { box-shadow: 0 0 0 var(--h0) var(--soft); } 50% { box-shadow: 0 0 0 var(--h1) var(--soft); } }
+@keyframes pager { 0%, 28% { transform: translateX(0); } 33.3%, 61.6% { transform: translateX(-33.3333%); } 66.6%, 95% { transform: translateX(-66.6667%); } 100% { transform: translateX(0); } }
+@keyframes cyc0 { 0%, 28% { opacity: 1; } 33.3%, 95% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes cyc1 { 0%, 28% { opacity: 0; } 33.3%, 61.6% { opacity: 1; } 66.6%, 100% { opacity: 0; } }
+@keyframes cyc2 { 0%, 61.6% { opacity: 0; } 66.6%, 95% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Reduced motion: everything shows at once, the hero phone stays on Today, nothing loops */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
+  .p3 { animation: none !important; transform: none !important; }
+  .c0 { animation: none !important; opacity: 1 !important; }
+  .c1, .c2 { animation: none !important; opacity: 0 !important; }
+}
