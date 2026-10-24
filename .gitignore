@@ -1,0 +1,10 @@
+*.zip
+*.apk
+node_modules/
+.DS_Store
+.claude/settings.local.json
+
+# Working files that stay on this laptop
+CLAUDE.md
+.claude/
+docs/
