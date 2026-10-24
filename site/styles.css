@@ -22,6 +22,12 @@
   --g1: #E0612A;
   --g2: #8A55C9;
   --g3: #C99A0E;
+  --float: 0 12px 32px rgba(21, 21, 20, 0.12);
+  --pop: 0 -10px 30px rgba(21, 21, 20, 0.12);
+  --a1: #2F9E5A; --s1: #D9EDE0;
+  --a2: #2F54E6; --s2: #DFE5FC;
+  --a3: #F05A22; --s3: #FCE3D8;
+  --a4: #151514; --s4: #E3E2DD;
   --frame: 0 1px 2px rgba(21, 21, 20, 0.05), 0 30px 60px -24px rgba(21, 21, 20, 0.24);
 }
 
@@ -47,6 +53,12 @@
     --g1: #F08A55;
     --g2: #B08AE6;
     --g3: #E6B93A;
+    --float: 0 0 0 1px #2A2A28, 0 12px 32px rgba(0, 0, 0, 0.5);
+    --pop: 0 0 0 1px #2A2A28, 0 -10px 30px rgba(0, 0, 0, 0.5);
+    --a1: #4CC77A; --s1: #1E3A28;
+    --a2: #7D97FF; --s2: #1E2647;
+    --a3: #FF7A45; --s3: #3B2219;
+    --a4: #EDEDE8; --s4: #2A2A28;
     --frame: 0 0 0 1px #2A2A28, 0 30px 60px -24px rgba(0, 0, 0, 0.7);
   }
 }
@@ -72,6 +84,12 @@
   --g1: #F08A55;
   --g2: #B08AE6;
   --g3: #E6B93A;
+  --float: 0 0 0 1px #2A2A28, 0 12px 32px rgba(0, 0, 0, 0.5);
+  --pop: 0 0 0 1px #2A2A28, 0 -10px 30px rgba(0, 0, 0, 0.5);
+  --a1: #4CC77A; --s1: #1E3A28;
+  --a2: #7D97FF; --s2: #1E2647;
+  --a3: #FF7A45; --s3: #3B2219;
+  --a4: #EDEDE8; --s4: #2A2A28;
   --frame: 0 0 0 1px #2A2A28, 0 30px 60px -24px rgba(0, 0, 0, 0.7);
 }
 
@@ -210,14 +228,14 @@ h2 { margin: 0; font-size: clamp(36px, 4.8vw, 58px); line-height: 1.06; font-wei
 .chip:active { transform: scale(.97); }
 .year-grid { --c: var(--ink); display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, auto); grid-template-columns: repeat(52, minmax(0, 1fr)); gap: clamp(2px, 0.45vw, 6px); }
 .yd { display: block; aspect-ratio: 1; border-radius: 50%; opacity: 0; background: var(--empty); transition: background-color .55s ease calc(var(--col) * 7ms); }
-.yd[data-l="4"] { background: var(--c); }
+.yd[data-l="4"], .sd[data-l="4"], .cd[data-l="4"], .pk[data-l="4"] { background: var(--c, var(--ink)); }
 @supports (background: color-mix(in srgb, red 50%, transparent)) {
-  .yd[data-l="1"] { background: color-mix(in srgb, var(--c) 25%, transparent); }
-  .yd[data-l="2"] { background: color-mix(in srgb, var(--c) 45%, transparent); }
-  .yd[data-l="3"] { background: color-mix(in srgb, var(--c) 69%, transparent); }
+  :is(.yd, .sd, .cd, .pk)[data-l="1"] { background: color-mix(in srgb, var(--c, var(--ink)) 25%, transparent); }
+  :is(.yd, .sd, .cd, .pk)[data-l="2"] { background: color-mix(in srgb, var(--c, var(--ink)) 45%, transparent); }
+  :is(.yd, .sd, .cd, .pk)[data-l="3"] { background: color-mix(in srgb, var(--c, var(--ink)) 69%, transparent); }
 }
 @supports not (background: color-mix(in srgb, red 50%, transparent)) {
-  .yd[data-l="1"], .yd[data-l="2"], .yd[data-l="3"] { background: var(--c); }
+  :is(.yd, .sd, .cd, .pk)[data-l="1"], :is(.yd, .sd, .cd, .pk)[data-l="2"], :is(.yd, .sd, .cd, .pk)[data-l="3"] { background: var(--c, var(--ink)); }
 }
 .yd.today { background: var(--acc); --h0: 2px; --h1: 5px; }
 .in .yd { animation: dotIn .45s cubic-bezier(.3, 1.4, .5, 1) calc(var(--col) * 26ms + var(--row) * 14ms) both; }
@@ -286,6 +304,118 @@ h2 { margin: 0; font-size: clamp(36px, 4.8vw, 58px); line-height: 1.06; font-wei
 @keyframes dlLabel { from { opacity: 0; transform: translate(-50%, 6px); } to { opacity: 1; transform: translate(-50%, 0); } }
 @keyframes dlShow { from { opacity: 0; } to { opacity: 1; } }
 
+/* Everything in it: 12 tiles, each with a small demo that plays when the grid is revealed. 4 across, 2 on tablets, a swipe carousel on phones. */
+.bento { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.span2 { grid-column: span 2; }
+.f-tile { display: flex; flex-direction: column; min-width: 0; border-radius: 28px; padding: 16px 16px 24px; background: var(--card); box-shadow: var(--card-edge); }
+.f-tile h3 { margin: 18px 0 0; font-size: 19px; font-weight: 700; }
+.f-tile p { margin: 4px 0 0; font-size: 15px; line-height: 1.5; color: var(--ink2); }
+.f-demo { position: relative; display: flex; align-items: center; justify-content: center; min-height: 178px; border-radius: 18px; overflow: hidden; background: var(--sel); }
+.f-hint { display: none; margin: 14px 0 0; font-size: 14px; color: var(--ink2); }
+@media (max-width: 1040px) { .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) {
+  .bento { grid-auto-flow: column; grid-auto-columns: 84%; grid-template-columns: none; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0 calc(-1 * clamp(16px, 4vw, 40px)); padding: 4px clamp(16px, 4vw, 40px) 16px; scroll-padding: 0 clamp(16px, 4vw, 40px); }
+  .bento::-webkit-scrollbar { display: none; }
+  .bento > * { scroll-snap-align: start; }
+  .span2 { grid-column: auto; }
+  .f-hint { display: block; }
+}
+
+/* small pieces the demos share */
+.stack { width: 100%; padding: 0 14px; display: flex; flex-direction: column; gap: 10px; }
+.row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 14px; background: var(--card); }
+.row .t { font-size: 14px; font-weight: 600; }
+.sub { font-size: 11px; color: var(--ink2); }
+.chip-s { padding: 1px 7px; border-radius: 7px; background: var(--chip); }
+.ck { position: relative; flex: 0 0 auto; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--faint); }
+.ck b { position: absolute; inset: 0; border-radius: 50%; background: var(--ink); }
+.ck svg { position: absolute; inset: 0; }
+.pill-s { padding: 5px 10px; border-radius: 14px; background: var(--card); color: var(--ink2); }
+.pill-s.on { box-shadow: inset 0 0 0 1.5px var(--ink); color: var(--ink); font-weight: 600; }
+.dotrow { display: flex; align-items: center; gap: 4px; }
+.dotrow i { display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--ink); }
+.dotrow i.h { background: var(--faint); }
+.mood-dots { display: flex; align-items: center; gap: 5px; }
+.mood-dots i { display: block; width: 7px; height: 7px; border-radius: 50%; background: var(--ink); }
+
+/* demo animations (each starts when its tile's section gets "in") */
+.f-type { display: inline-block; white-space: nowrap; clip-path: inset(0 100% 0 0); }
+.in .f-type { animation: typeIn var(--dur) steps(var(--steps)) var(--d) both; }
+.f-pop { opacity: 0; }
+.in .f-pop { animation: dotIn .45s cubic-bezier(.3, 1.4, .5, 1) var(--d) both; }
+.f-up { opacity: 0; }
+.in .f-up { animation: fadeUp .6s cubic-bezier(.2, .7, .2, 1) var(--d) both; }
+.f-fade { opacity: 0; }
+.in .f-fade { animation: dlShow .35s ease var(--d) both; }
+.in .f-out { animation: fadeOut .3s ease var(--d) both; }
+.f-chk path { stroke-dasharray: 20; stroke-dashoffset: 20; }
+.in .f-chk path { animation: draw .35s ease var(--d) both; }
+.f-strike { transform: scaleX(0); transform-origin: left; }
+.in .f-strike { animation: strike .35s ease var(--d) both; }
+.f-caret { opacity: 0; }
+.in .f-caret { animation: dlShow .01s linear var(--d) both, blink 1.1s steps(1) var(--d) infinite; }
+.f-tap { opacity: 0; }
+.in .f-tap { animation: tap .9s ease-out var(--d) both; }
+.f-notif { opacity: 0; }
+.in .f-notif { animation: notif 6s cubic-bezier(.2, .7, .2, 1) .6s infinite; }
+.f-moodsel { transform: translateX(200%); }
+.in .f-moodsel { animation: moodmove .6s cubic-bezier(.3, 1.3, .5, 1) .8s both; }
+.f-sheet { transform: translateY(100%); }
+.in .f-sheet { animation: sheetUp .7s cubic-bezier(.2, .8, .2, 1) .7s both; }
+.in .f-acc { animation: accCycle 8s ease-in-out .5s infinite; }
+.in .f-ring { animation: ringMove 8s cubic-bezier(.5, 0, .3, 1) .5s infinite; }
+.in .f-aa { animation: aaCycle 8s cubic-bezier(.5, 0, .3, 1) .5s infinite; }
+.in .f-ld { animation: ldCycle 8s ease-in-out .5s infinite; }
+.sd { display: block; aspect-ratio: 1; border-radius: 50%; background: var(--empty); }
+.sd.today { background: var(--acc); }
+.sd.future { background: transparent; }
+.rd { position: absolute; width: 8px; height: 8px; border-radius: 50%; }
+.rd.base { box-shadow: inset 0 0 0 1.5px var(--faint); }
+.rd.fill { background: var(--ink); }
+.cd { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; font-size: 10px; background: var(--empty); }
+.cd[data-l="3"], .cd[data-l="4"] { color: var(--on-ink); }
+.cd.off { background: none; color: var(--faint); }
+.pk { display: block; width: 14px; height: 14px; border-radius: 50%; }
+.today-ring { box-shadow: 0 0 0 2px var(--sel), 0 0 0 3.5px var(--acc); }
+@keyframes typeIn { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes fadeOut { to { opacity: 0; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes strike { to { transform: scaleX(1); } }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes tap { 0% { opacity: 0; transform: scale(.6); } 25% { opacity: 1; } 100% { opacity: 0; transform: scale(1.9); } }
+@keyframes notif { 0% { opacity: 0; transform: translateY(-130%); } 8%, 70% { opacity: 1; transform: none; } 80%, 100% { opacity: 0; transform: translateY(-130%); } }
+@keyframes moodmove { from { transform: translateX(200%); } to { transform: translateX(300%); } }
+@keyframes sheetUp { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes accCycle { 0%, 22% { background: var(--a1); box-shadow: 0 0 0 6px var(--s1); } 25%, 47% { background: var(--a2); box-shadow: 0 0 0 6px var(--s2); } 50%, 72% { background: var(--a3); box-shadow: 0 0 0 6px var(--s3); } 75%, 97% { background: var(--a4); box-shadow: 0 0 0 6px var(--s4); } 100% { background: var(--a1); box-shadow: 0 0 0 6px var(--s1); } }
+@keyframes ringMove { 0%, 22% { transform: translateX(0); } 25%, 47% { transform: translateX(18px); } 50%, 72% { transform: translateX(36px); } 75%, 97% { transform: translateX(54px); } 100% { transform: translateX(0); } }
+@keyframes aaCycle { 0%, 22% { transform: scale(.82); } 25%, 47% { transform: scale(1); } 50%, 72% { transform: scale(1.2); } 75%, 97% { transform: scale(1); } 100% { transform: scale(.82); } }
+@keyframes ldCycle { 0%, 44% { background: var(--pl); color: var(--il); } 50%, 94% { background: var(--pd); color: var(--id); } 100% { background: var(--pl); color: var(--il); } }
+
+/* Not a game: four 30-day strips, filled row by row */
+.game { display: flex; flex-wrap: wrap; align-items: center; gap: 48px 72px; }
+.game-text { flex: 1 1 360px; min-width: 0; }
+.game-text .intro { max-width: 460px; }
+.game-card { flex: 1 1 520px; min-width: 0; border-radius: 28px; background: var(--card); box-shadow: var(--card-edge); padding: clamp(20px, 3vw, 32px); transition-delay: .12s; }
+.game-card > .sl { margin-bottom: 8px; }
+.gstrip { padding: 14px 0; }
+.gstrip-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.gstrip-name { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; }
+.gstrip-name i { display: block; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+.gstrip-count { font-size: 14px; color: var(--ink2); }
+.gstrip-dots { display: grid; grid-template-columns: repeat(30, minmax(0, 1fr)); gap: 4px; }
+.gd { display: block; aspect-ratio: 1; border-radius: 50%; background: var(--empty); opacity: 0; }
+.in .gd { animation: dotIn .45s cubic-bezier(.3, 1.4, .5, 1) var(--d) both; }
+.gd[data-l="4"] { background: var(--c); }
+@supports (background: color-mix(in srgb, red 50%, transparent)) {
+  .gd[data-l="1"] { background: color-mix(in srgb, var(--c) 35%, transparent); }
+  .gd[data-l="2"] { background: color-mix(in srgb, var(--c) 55%, transparent); }
+  .gd[data-l="3"] { background: color-mix(in srgb, var(--c) 76%, transparent); }
+}
+@supports not (background: color-mix(in srgb, red 50%, transparent)) {
+  .gd[data-l="1"], .gd[data-l="2"], .gd[data-l="3"] { background: var(--c); }
+}
+.gd.last { box-shadow: 0 0 0 2px var(--card), 0 0 0 3.5px var(--acc); }
+
 /* Footer */
 .foot { padding-top: 32px; padding-bottom: 48px; }
 .foot-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding-top: 32px; box-shadow: inset 0 1px 0 var(--line); }
@@ -308,6 +438,7 @@ h2 { margin: 0; font-size: clamp(36px, 4.8vw, 58px); line-height: 1.06; font-wei
 /* Reduced motion: everything shows at once, the hero phone stays on Today, nothing loops */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
+  .f-notif { opacity: 1 !important; transform: none !important; }
   .p3 { animation: none !important; transform: none !important; }
   .c0 { animation: none !important; opacity: 1 !important; }
   .c1, .c2 { animation: none !important; opacity: 0 !important; }
