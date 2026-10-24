@@ -1,0 +1,3028 @@
+{
+ "format": "notes-backup",
+ "formatVersion": 1,
+ "schemaVersion": 5,
+ "exportedAt": "2026-10-24T18:08:45.000Z",
+ "tables": {
+  "focus_sessions": [
+   {
+    "id": 1,
+    "day": "2026-09-12",
+    "started_at": 1789217100000,
+    "ended_at": 1789219800000,
+    "minutes": 45,
+    "goal_id": null,
+    "task_id": null
+   },
+   {
+    "id": 2,
+    "day": "2026-10-07",
+    "started_at": 1791349200000,
+    "ended_at": 1791350700000,
+    "minutes": 25,
+    "goal_id": 1,
+    "task_id": null
+   },
+   {
+    "id": 3,
+    "day": "2026-10-09",
+    "started_at": 1791521100000,
+    "ended_at": 1791522600000,
+    "minutes": 25,
+    "goal_id": 1,
+    "task_id": null
+   },
+   {
+    "id": 4,
+    "day": "2026-10-01",
+    "started_at": 1790844300000,
+    "ended_at": 1790847900000,
+    "minutes": 60,
+    "goal_id": 1,
+    "task_id": null
+   },
+   {
+    "id": 5,
+    "day": "2026-09-15",
+    "started_at": 1789455600000,
+    "ended_at": 1789459200000,
+    "minutes": 60,
+    "goal_id": 4,
+    "task_id": null
+   },
+   {
+    "id": 6,
+    "day": "2026-10-23",
+    "started_at": 1792755900000,
+    "ended_at": 1792758600000,
+    "minutes": 45,
+    "goal_id": 3,
+    "task_id": null
+   },
+   {
+    "id": 7,
+    "day": "2026-10-05",
+    "started_at": 1791201600000,
+    "ended_at": 1791204300000,
+    "minutes": 45,
+    "goal_id": null,
+    "task_id": null
+   },
+   {
+    "id": 8,
+    "day": "2026-09-20",
+    "started_at": 1789890300000,
+    "ended_at": 1789893000000,
+    "minutes": 45,
+    "goal_id": 4,
+    "task_id": null
+   },
+   {
+    "id": 9,
+    "day": "2026-10-06",
+    "started_at": 1791290700000,
+    "ended_at": 1791292200000,
+    "minutes": 25,
+    "goal_id": 1,
+    "task_id": null
+   },
+   {
+    "id": 10,
+    "day": "2026-09-13",
+    "started_at": 1789299900000,
+    "ended_at": 1789302600000,
+    "minutes": 45,
+    "goal_id": 1,
+    "task_id": null
+   },
+   {
+    "id": 11,
+    "day": "2026-09-25",
+    "started_at": 1790312400000,
+    "ended_at": 1790313900000,
+    "minutes": 25,
+    "goal_id": 3,
+    "task_id": null
+   },
+   {
+    "id": 12,
+    "day": "2026-10-12",
+    "started_at": 1791788400000,
+    "ended_at": 1791792000000,
+    "minutes": 60,
+    "goal_id": 1,
+    "task_id": null
+   },
+   {
+    "id": 13,
+    "day": "2026-09-24",
+    "started_at": 1790240400000,
+    "ended_at": 1790241900000,
+    "minutes": 25,
+    "goal_id": 1,
+    "task_id": null
+   },
+   {
+    "id": 14,
+    "day": "2026-10-15",
+    "started_at": 1792058400000,
+    "ended_at": 1792061400000,
+    "minutes": 50,
+    "goal_id": null,
+    "task_id": null
+   },
+   {
+    "id": 15,
+    "day": "2026-10-18",
+    "started_at": 1792327500000,
+    "ended_at": 1792329000000,
+    "minutes": 25,
+    "goal_id": 1,
+    "task_id": null
+   },
+   {
+    "id": 16,
+    "day": "2026-10-16",
+    "started_at": 1792144800000,
+    "ended_at": 1792147800000,
+    "minutes": 50,
+    "goal_id": 1,
+    "task_id": null
+   },
+   {
+    "id": 17,
+    "day": "2026-09-14",
+    "started_at": 1789389900000,
+    "ended_at": 1789392600000,
+    "minutes": 45,
+    "goal_id": 3,
+    "task_id": null
+   },
+   {
+    "id": 18,
+    "day": "2026-09-09",
+    "started_at": 1788943500000,
+    "ended_at": 1788946200000,
+    "minutes": 45,
+    "goal_id": 1,
+    "task_id": null
+   },
+   {
+    "id": 19,
+    "day": "2026-10-14",
+    "started_at": 1791973800000,
+    "ended_at": 1791976500000,
+    "minutes": 45,
+    "goal_id": null,
+    "task_id": null
+   },
+   {
+    "id": 20,
+    "day": "2026-09-28",
+    "started_at": 1790591400000,
+    "ended_at": 1790595000000,
+    "minutes": 60,
+    "goal_id": 3,
+    "task_id": null
+   },
+   {
+    "id": 21,
+    "day": "2026-10-24",
+    "started_at": 1792814400000,
+    "ended_at": 1792817400000,
+    "minutes": 50,
+    "goal_id": 3,
+    "task_id": null
+   },
+   {
+    "id": 22,
+    "day": "2026-10-24",
+    "started_at": 1792846800000,
+    "ended_at": 1792849500000,
+    "minutes": 45,
+    "goal_id": 4,
+    "task_id": null
+   }
+  ],
+  "goals": [
+   {
+    "id": 1,
+    "name": "writing",
+    "color_slot": 3,
+    "position": 0,
+    "archived_at": null,
+    "created_at": 1782444600000
+   },
+   {
+    "id": 2,
+    "name": "fitness",
+    "color_slot": 1,
+    "position": 1,
+    "archived_at": null,
+    "created_at": 1782444600000
+   },
+   {
+    "id": 3,
+    "name": "code",
+    "color_slot": 0,
+    "position": 2,
+    "archived_at": null,
+    "created_at": 1782444600000
+   },
+   {
+    "id": 4,
+    "name": "reading",
+    "color_slot": 2,
+    "position": 3,
+    "archived_at": null,
+    "created_at": 1782444600000
+   }
+  ],
+  "habit_logs": [
+   {
+    "habit_id": 1,
+    "day": "2026-06-26",
+    "value": 2,
+    "logged_at": 1782484200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-06-27",
+    "value": 3.5,
+    "logged_at": 1782570600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-06-27",
+    "value": 1,
+    "logged_at": 1782570600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-06-27",
+    "value": 1,
+    "logged_at": 1782570600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-06-28",
+    "value": 2.5,
+    "logged_at": 1782657000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-06-28",
+    "value": 1,
+    "logged_at": 1782657000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-06-28",
+    "value": 1,
+    "logged_at": 1782657000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-06-29",
+    "value": 2,
+    "logged_at": 1782743400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-06-29",
+    "value": 1,
+    "logged_at": 1782743400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-06-29",
+    "value": 1,
+    "logged_at": 1782743400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-06-30",
+    "value": 3.5,
+    "logged_at": 1782829800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-06-30",
+    "value": 1,
+    "logged_at": 1782829800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-01",
+    "value": 2.5,
+    "logged_at": 1782916200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-01",
+    "value": 1,
+    "logged_at": 1782916200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-02",
+    "value": 2.5,
+    "logged_at": 1783002600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-02",
+    "value": 1,
+    "logged_at": 1783002600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-03",
+    "value": 3,
+    "logged_at": 1783089000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-03",
+    "value": 1,
+    "logged_at": 1783089000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-03",
+    "value": 1,
+    "logged_at": 1783089000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-04",
+    "value": 3.5,
+    "logged_at": 1783175400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-04",
+    "value": 1,
+    "logged_at": 1783175400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-05",
+    "value": 2.5,
+    "logged_at": 1783261800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-05",
+    "value": 1,
+    "logged_at": 1783261800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-06",
+    "value": 3.5,
+    "logged_at": 1783348200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-06",
+    "value": 1,
+    "logged_at": 1783348200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-06",
+    "value": 1,
+    "logged_at": 1783348200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-07",
+    "value": 3,
+    "logged_at": 1783434600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-07",
+    "value": 1,
+    "logged_at": 1783434600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-08",
+    "value": 2.5,
+    "logged_at": 1783521000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-08",
+    "value": 1,
+    "logged_at": 1783521000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-09",
+    "value": 2,
+    "logged_at": 1783607400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-09",
+    "value": 1,
+    "logged_at": 1783607400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-10",
+    "value": 1.5,
+    "logged_at": 1783693800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-10",
+    "value": 1,
+    "logged_at": 1783693800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-10",
+    "value": 1,
+    "logged_at": 1783693800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-11",
+    "value": 2,
+    "logged_at": 1783780200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-11",
+    "value": 1,
+    "logged_at": 1783780200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-12",
+    "value": 2,
+    "logged_at": 1783866600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-12",
+    "value": 1,
+    "logged_at": 1783866600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-13",
+    "value": 2,
+    "logged_at": 1783953000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-13",
+    "value": 1,
+    "logged_at": 1783953000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-13",
+    "value": 1,
+    "logged_at": 1783953000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-14",
+    "value": 3,
+    "logged_at": 1784039400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-14",
+    "value": 1,
+    "logged_at": 1784039400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-15",
+    "value": 2,
+    "logged_at": 1784125800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-15",
+    "value": 1,
+    "logged_at": 1784125800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-15",
+    "value": 1,
+    "logged_at": 1784125800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-16",
+    "value": 3,
+    "logged_at": 1784212200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-16",
+    "value": 1,
+    "logged_at": 1784212200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-17",
+    "value": 1,
+    "logged_at": 1784298600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-18",
+    "value": 2.5,
+    "logged_at": 1784385000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-18",
+    "value": 1,
+    "logged_at": 1784385000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-18",
+    "value": 1,
+    "logged_at": 1784385000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-19",
+    "value": 1.5,
+    "logged_at": 1784471400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-19",
+    "value": 1,
+    "logged_at": 1784471400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-20",
+    "value": 2.5,
+    "logged_at": 1784557800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-20",
+    "value": 1,
+    "logged_at": 1784557800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-20",
+    "value": 1,
+    "logged_at": 1784557800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-21",
+    "value": 2,
+    "logged_at": 1784644200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-21",
+    "value": 1,
+    "logged_at": 1784644200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-21",
+    "value": 1,
+    "logged_at": 1784644200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-22",
+    "value": 2.5,
+    "logged_at": 1784730600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-22",
+    "value": 1,
+    "logged_at": 1784730600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-22",
+    "value": 1,
+    "logged_at": 1784730600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-23",
+    "value": 2,
+    "logged_at": 1784817000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-23",
+    "value": 1,
+    "logged_at": 1784817000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-24",
+    "value": 3,
+    "logged_at": 1784903400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-24",
+    "value": 1,
+    "logged_at": 1784903400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-25",
+    "value": 2.5,
+    "logged_at": 1784989800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-25",
+    "value": 1,
+    "logged_at": 1784989800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-26",
+    "value": 2,
+    "logged_at": 1785076200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-26",
+    "value": 1,
+    "logged_at": 1785076200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-27",
+    "value": 2,
+    "logged_at": 1785162600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-27",
+    "value": 1,
+    "logged_at": 1785162600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-27",
+    "value": 1,
+    "logged_at": 1785162600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-28",
+    "value": 2,
+    "logged_at": 1785249000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-28",
+    "value": 1,
+    "logged_at": 1785249000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-29",
+    "value": 2,
+    "logged_at": 1785335400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-29",
+    "value": 1,
+    "logged_at": 1785335400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-07-29",
+    "value": 1,
+    "logged_at": 1785335400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-30",
+    "value": 3.5,
+    "logged_at": 1785421800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-30",
+    "value": 1,
+    "logged_at": 1785421800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-07-31",
+    "value": 3.5,
+    "logged_at": 1785508200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-07-31",
+    "value": 1,
+    "logged_at": 1785508200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-01",
+    "value": 1,
+    "logged_at": 1785594600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-01",
+    "value": 1,
+    "logged_at": 1785594600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-02",
+    "value": 2.5,
+    "logged_at": 1785681000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-02",
+    "value": 1,
+    "logged_at": 1785681000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-02",
+    "value": 1,
+    "logged_at": 1785681000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-03",
+    "value": 3,
+    "logged_at": 1785767400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-03",
+    "value": 1,
+    "logged_at": 1785767400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-04",
+    "value": 2,
+    "logged_at": 1785853800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-04",
+    "value": 1,
+    "logged_at": 1785853800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-04",
+    "value": 1,
+    "logged_at": 1785853800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-05",
+    "value": 1,
+    "logged_at": 1785940200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-05",
+    "value": 1,
+    "logged_at": 1785940200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-06",
+    "value": 2.5,
+    "logged_at": 1786026600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-06",
+    "value": 1,
+    "logged_at": 1786026600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-06",
+    "value": 1,
+    "logged_at": 1786026600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-07",
+    "value": 2.5,
+    "logged_at": 1786113000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-07",
+    "value": 1,
+    "logged_at": 1786113000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-07",
+    "value": 1,
+    "logged_at": 1786113000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-08",
+    "value": 1,
+    "logged_at": 1786199400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-08",
+    "value": 1,
+    "logged_at": 1786199400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-09",
+    "value": 2.5,
+    "logged_at": 1786285800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-09",
+    "value": 1,
+    "logged_at": 1786285800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-10",
+    "value": 1,
+    "logged_at": 1786372200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-11",
+    "value": 3.5,
+    "logged_at": 1786458600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-12",
+    "value": 1.5,
+    "logged_at": 1786545000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-13",
+    "value": 2,
+    "logged_at": 1786631400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-13",
+    "value": 1,
+    "logged_at": 1786631400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-13",
+    "value": 1,
+    "logged_at": 1786631400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-14",
+    "value": 1.5,
+    "logged_at": 1786717800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-14",
+    "value": 1,
+    "logged_at": 1786717800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-15",
+    "value": 2,
+    "logged_at": 1786804200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-15",
+    "value": 1,
+    "logged_at": 1786804200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-16",
+    "value": 2.5,
+    "logged_at": 1786890600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-16",
+    "value": 1,
+    "logged_at": 1786890600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-16",
+    "value": 1,
+    "logged_at": 1786890600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-17",
+    "value": 1.5,
+    "logged_at": 1786977000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-18",
+    "value": 2,
+    "logged_at": 1787063400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-18",
+    "value": 1,
+    "logged_at": 1787063400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-18",
+    "value": 1,
+    "logged_at": 1787063400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-19",
+    "value": 2.5,
+    "logged_at": 1787149800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-19",
+    "value": 1,
+    "logged_at": 1787149800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-19",
+    "value": 1,
+    "logged_at": 1787149800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-20",
+    "value": 2,
+    "logged_at": 1787236200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-20",
+    "value": 1,
+    "logged_at": 1787236200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-20",
+    "value": 1,
+    "logged_at": 1787236200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-21",
+    "value": 2.5,
+    "logged_at": 1787322600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-22",
+    "value": 2.5,
+    "logged_at": 1787409000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-22",
+    "value": 1,
+    "logged_at": 1787409000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-22",
+    "value": 1,
+    "logged_at": 1787409000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-23",
+    "value": 3.5,
+    "logged_at": 1787495400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-23",
+    "value": 1,
+    "logged_at": 1787495400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-23",
+    "value": 1,
+    "logged_at": 1787495400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-24",
+    "value": 3,
+    "logged_at": 1787581800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-24",
+    "value": 1,
+    "logged_at": 1787581800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-25",
+    "value": 2,
+    "logged_at": 1787668200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-25",
+    "value": 1,
+    "logged_at": 1787668200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-25",
+    "value": 1,
+    "logged_at": 1787668200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-26",
+    "value": 2.5,
+    "logged_at": 1787754600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-26",
+    "value": 1,
+    "logged_at": 1787754600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-27",
+    "value": 3,
+    "logged_at": 1787841000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-27",
+    "value": 1,
+    "logged_at": 1787841000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-28",
+    "value": 2.5,
+    "logged_at": 1787927400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-28",
+    "value": 1,
+    "logged_at": 1787927400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-29",
+    "value": 3.5,
+    "logged_at": 1788013800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-29",
+    "value": 1,
+    "logged_at": 1788013800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-30",
+    "value": 2.5,
+    "logged_at": 1788100200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-30",
+    "value": 1,
+    "logged_at": 1788100200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-08-31",
+    "value": 2.5,
+    "logged_at": 1788186600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-08-31",
+    "value": 1,
+    "logged_at": 1788186600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-08-31",
+    "value": 1,
+    "logged_at": 1788186600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-01",
+    "value": 2,
+    "logged_at": 1788273000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-01",
+    "value": 1,
+    "logged_at": 1788273000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-01",
+    "value": 1,
+    "logged_at": 1788273000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-03",
+    "value": 2.5,
+    "logged_at": 1788445800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-03",
+    "value": 1,
+    "logged_at": 1788445800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-03",
+    "value": 1,
+    "logged_at": 1788445800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-04",
+    "value": 3,
+    "logged_at": 1788532200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-04",
+    "value": 1,
+    "logged_at": 1788532200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-04",
+    "value": 1,
+    "logged_at": 1788532200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-05",
+    "value": 2.5,
+    "logged_at": 1788618600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-05",
+    "value": 1,
+    "logged_at": 1788618600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-06",
+    "value": 3,
+    "logged_at": 1788705000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-06",
+    "value": 1,
+    "logged_at": 1788705000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-06",
+    "value": 1,
+    "logged_at": 1788705000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-07",
+    "value": 1,
+    "logged_at": 1788791400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-08",
+    "value": 1,
+    "logged_at": 1788877800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-08",
+    "value": 1,
+    "logged_at": 1788877800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-09",
+    "value": 3,
+    "logged_at": 1788964200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-09",
+    "value": 1,
+    "logged_at": 1788964200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-10",
+    "value": 1.5,
+    "logged_at": 1789050600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-11",
+    "value": 3,
+    "logged_at": 1789137000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-11",
+    "value": 1,
+    "logged_at": 1789137000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-11",
+    "value": 1,
+    "logged_at": 1789137000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-12",
+    "value": 3.5,
+    "logged_at": 1789223400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-13",
+    "value": 3,
+    "logged_at": 1789309800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-13",
+    "value": 1,
+    "logged_at": 1789309800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-13",
+    "value": 1,
+    "logged_at": 1789309800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-14",
+    "value": 1.5,
+    "logged_at": 1789396200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-14",
+    "value": 1,
+    "logged_at": 1789396200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-14",
+    "value": 1,
+    "logged_at": 1789396200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-15",
+    "value": 2,
+    "logged_at": 1789482600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-15",
+    "value": 1,
+    "logged_at": 1789482600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-16",
+    "value": 3,
+    "logged_at": 1789569000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-16",
+    "value": 1,
+    "logged_at": 1789569000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-16",
+    "value": 1,
+    "logged_at": 1789569000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-17",
+    "value": 1,
+    "logged_at": 1789655400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-17",
+    "value": 1,
+    "logged_at": 1789655400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-18",
+    "value": 2.5,
+    "logged_at": 1789741800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-18",
+    "value": 1,
+    "logged_at": 1789741800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-18",
+    "value": 1,
+    "logged_at": 1789741800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-19",
+    "value": 2,
+    "logged_at": 1789828200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-19",
+    "value": 1,
+    "logged_at": 1789828200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-20",
+    "value": 3.5,
+    "logged_at": 1789914600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-21",
+    "value": 3,
+    "logged_at": 1790001000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-21",
+    "value": 1,
+    "logged_at": 1790001000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-21",
+    "value": 1,
+    "logged_at": 1790001000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-22",
+    "value": 2.5,
+    "logged_at": 1790087400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-22",
+    "value": 1,
+    "logged_at": 1790087400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-23",
+    "value": 2,
+    "logged_at": 1790173800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-23",
+    "value": 1,
+    "logged_at": 1790173800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-24",
+    "value": 2,
+    "logged_at": 1790260200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-24",
+    "value": 1,
+    "logged_at": 1790260200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-25",
+    "value": 3,
+    "logged_at": 1790346600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-25",
+    "value": 1,
+    "logged_at": 1790346600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-25",
+    "value": 1,
+    "logged_at": 1790346600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-26",
+    "value": 3,
+    "logged_at": 1790433000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-26",
+    "value": 1,
+    "logged_at": 1790433000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-26",
+    "value": 1,
+    "logged_at": 1790433000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-27",
+    "value": 3,
+    "logged_at": 1790519400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-27",
+    "value": 1,
+    "logged_at": 1790519400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-28",
+    "value": 3,
+    "logged_at": 1790605800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-28",
+    "value": 1,
+    "logged_at": 1790605800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-28",
+    "value": 1,
+    "logged_at": 1790605800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-29",
+    "value": 3.5,
+    "logged_at": 1790692200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-29",
+    "value": 1,
+    "logged_at": 1790692200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-09-29",
+    "value": 1,
+    "logged_at": 1790692200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-09-30",
+    "value": 1.5,
+    "logged_at": 1790778600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-09-30",
+    "value": 1,
+    "logged_at": 1790778600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-01",
+    "value": 2,
+    "logged_at": 1790865000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-01",
+    "value": 1,
+    "logged_at": 1790865000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-01",
+    "value": 1,
+    "logged_at": 1790865000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-02",
+    "value": 1.5,
+    "logged_at": 1790951400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-02",
+    "value": 1,
+    "logged_at": 1790951400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-02",
+    "value": 1,
+    "logged_at": 1790951400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-03",
+    "value": 3.5,
+    "logged_at": 1791037800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-03",
+    "value": 1,
+    "logged_at": 1791037800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-03",
+    "value": 1,
+    "logged_at": 1791037800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-04",
+    "value": 1.5,
+    "logged_at": 1791124200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-05",
+    "value": 1,
+    "logged_at": 1791210600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-05",
+    "value": 1,
+    "logged_at": 1791210600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-06",
+    "value": 1,
+    "logged_at": 1791297000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-06",
+    "value": 1,
+    "logged_at": 1791297000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-07",
+    "value": 3.5,
+    "logged_at": 1791383400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-07",
+    "value": 1,
+    "logged_at": 1791383400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-07",
+    "value": 1,
+    "logged_at": 1791383400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-08",
+    "value": 2,
+    "logged_at": 1791469800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-08",
+    "value": 1,
+    "logged_at": 1791469800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-08",
+    "value": 1,
+    "logged_at": 1791469800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-09",
+    "value": 2,
+    "logged_at": 1791556200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-09",
+    "value": 1,
+    "logged_at": 1791556200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-10",
+    "value": 2,
+    "logged_at": 1791642600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-10",
+    "value": 1,
+    "logged_at": 1791642600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-10",
+    "value": 1,
+    "logged_at": 1791642600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-11",
+    "value": 3,
+    "logged_at": 1791729000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-11",
+    "value": 1,
+    "logged_at": 1791729000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-12",
+    "value": 2,
+    "logged_at": 1791815400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-12",
+    "value": 1,
+    "logged_at": 1791815400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-12",
+    "value": 1,
+    "logged_at": 1791815400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-13",
+    "value": 3.5,
+    "logged_at": 1791901800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-13",
+    "value": 1,
+    "logged_at": 1791901800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-13",
+    "value": 1,
+    "logged_at": 1791901800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-14",
+    "value": 3.5,
+    "logged_at": 1791988200000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-14",
+    "value": 1,
+    "logged_at": 1791988200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-14",
+    "value": 1,
+    "logged_at": 1791988200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-15",
+    "value": 3.5,
+    "logged_at": 1792074600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-15",
+    "value": 1,
+    "logged_at": 1792074600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-16",
+    "value": 2.5,
+    "logged_at": 1792161000000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-16",
+    "value": 1,
+    "logged_at": 1792161000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-17",
+    "value": 3,
+    "logged_at": 1792247400000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-17",
+    "value": 1,
+    "logged_at": 1792247400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-18",
+    "value": 3,
+    "logged_at": 1792333800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-18",
+    "value": 1,
+    "logged_at": 1792333800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-19",
+    "value": 2.5,
+    "logged_at": 1792420200000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-19",
+    "value": 1,
+    "logged_at": 1792420200000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-20",
+    "value": 2,
+    "logged_at": 1792506600000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-20",
+    "value": 1,
+    "logged_at": 1792506600000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-20",
+    "value": 1,
+    "logged_at": 1792506600000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-21",
+    "value": 2.5,
+    "logged_at": 1792593000000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-21",
+    "value": 1,
+    "logged_at": 1792593000000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-22",
+    "value": 2.5,
+    "logged_at": 1792679400000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-23",
+    "value": 2.5,
+    "logged_at": 1792765800000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-23",
+    "value": 1,
+    "logged_at": 1792765800000
+   },
+   {
+    "habit_id": 3,
+    "day": "2026-10-23",
+    "value": 1,
+    "logged_at": 1792765800000
+   },
+   {
+    "habit_id": 1,
+    "day": "2026-10-24",
+    "value": 2.5,
+    "logged_at": 1792823400000
+   },
+   {
+    "habit_id": 2,
+    "day": "2026-10-24",
+    "value": 1,
+    "logged_at": 1792817700000
+   }
+  ],
+  "habits": [
+   {
+    "id": 1,
+    "goal_id": 2,
+    "name": "Water",
+    "kind": "amount",
+    "target": 3,
+    "unit": "L",
+    "days_mask": 127,
+    "remind_at": null,
+    "position": 0,
+    "start_day": "2026-06-26",
+    "archived_at": null,
+    "created_at": 1782444600000
+   },
+   {
+    "id": 2,
+    "goal_id": 3,
+    "name": "Code for an hour",
+    "kind": "check",
+    "target": null,
+    "unit": null,
+    "days_mask": 127,
+    "remind_at": null,
+    "position": 1,
+    "start_day": "2026-06-26",
+    "archived_at": null,
+    "created_at": 1782444600000
+   },
+   {
+    "id": 3,
+    "goal_id": 4,
+    "name": "Read 20 pages",
+    "kind": "check",
+    "target": null,
+    "unit": null,
+    "days_mask": 127,
+    "remind_at": null,
+    "position": 2,
+    "start_day": "2026-06-26",
+    "archived_at": null,
+    "created_at": 1782444600000
+   }
+  ],
+  "moods": [
+   {
+    "day": "2026-06-26",
+    "level": 3,
+    "logged_at": 1782484200000
+   },
+   {
+    "day": "2026-06-27",
+    "level": 4,
+    "logged_at": 1782570600000
+   },
+   {
+    "day": "2026-06-29",
+    "level": 3,
+    "logged_at": 1782743400000
+   },
+   {
+    "day": "2026-06-30",
+    "level": 5,
+    "logged_at": 1782829800000
+   },
+   {
+    "day": "2026-07-03",
+    "level": 5,
+    "logged_at": 1783089000000
+   },
+   {
+    "day": "2026-07-05",
+    "level": 5,
+    "logged_at": 1783261800000
+   },
+   {
+    "day": "2026-07-06",
+    "level": 4,
+    "logged_at": 1783348200000
+   },
+   {
+    "day": "2026-07-07",
+    "level": 3,
+    "logged_at": 1783434600000
+   },
+   {
+    "day": "2026-07-09",
+    "level": 3,
+    "logged_at": 1783607400000
+   },
+   {
+    "day": "2026-07-10",
+    "level": 4,
+    "logged_at": 1783693800000
+   },
+   {
+    "day": "2026-07-12",
+    "level": 5,
+    "logged_at": 1783866600000
+   },
+   {
+    "day": "2026-07-13",
+    "level": 4,
+    "logged_at": 1783953000000
+   },
+   {
+    "day": "2026-07-14",
+    "level": 5,
+    "logged_at": 1784039400000
+   },
+   {
+    "day": "2026-07-15",
+    "level": 2,
+    "logged_at": 1784125800000
+   },
+   {
+    "day": "2026-07-17",
+    "level": 4,
+    "logged_at": 1784298600000
+   },
+   {
+    "day": "2026-07-18",
+    "level": 3,
+    "logged_at": 1784385000000
+   },
+   {
+    "day": "2026-07-19",
+    "level": 4,
+    "logged_at": 1784471400000
+   },
+   {
+    "day": "2026-07-21",
+    "level": 4,
+    "logged_at": 1784644200000
+   },
+   {
+    "day": "2026-07-22",
+    "level": 2,
+    "logged_at": 1784730600000
+   },
+   {
+    "day": "2026-07-24",
+    "level": 3,
+    "logged_at": 1784903400000
+   },
+   {
+    "day": "2026-07-25",
+    "level": 4,
+    "logged_at": 1784989800000
+   },
+   {
+    "day": "2026-07-26",
+    "level": 4,
+    "logged_at": 1785076200000
+   },
+   {
+    "day": "2026-07-27",
+    "level": 3,
+    "logged_at": 1785162600000
+   },
+   {
+    "day": "2026-07-30",
+    "level": 5,
+    "logged_at": 1785421800000
+   },
+   {
+    "day": "2026-07-31",
+    "level": 3,
+    "logged_at": 1785508200000
+   },
+   {
+    "day": "2026-08-01",
+    "level": 2,
+    "logged_at": 1785594600000
+   },
+   {
+    "day": "2026-08-03",
+    "level": 3,
+    "logged_at": 1785767400000
+   },
+   {
+    "day": "2026-08-04",
+    "level": 4,
+    "logged_at": 1785853800000
+   },
+   {
+    "day": "2026-08-05",
+    "level": 3,
+    "logged_at": 1785940200000
+   },
+   {
+    "day": "2026-08-06",
+    "level": 4,
+    "logged_at": 1786026600000
+   },
+   {
+    "day": "2026-08-07",
+    "level": 4,
+    "logged_at": 1786113000000
+   },
+   {
+    "day": "2026-08-08",
+    "level": 3,
+    "logged_at": 1786199400000
+   },
+   {
+    "day": "2026-08-09",
+    "level": 5,
+    "logged_at": 1786285800000
+   },
+   {
+    "day": "2026-08-11",
+    "level": 3,
+    "logged_at": 1786458600000
+   },
+   {
+    "day": "2026-08-12",
+    "level": 4,
+    "logged_at": 1786545000000
+   },
+   {
+    "day": "2026-08-13",
+    "level": 4,
+    "logged_at": 1786631400000
+   },
+   {
+    "day": "2026-08-15",
+    "level": 3,
+    "logged_at": 1786804200000
+   },
+   {
+    "day": "2026-08-16",
+    "level": 3,
+    "logged_at": 1786890600000
+   },
+   {
+    "day": "2026-08-18",
+    "level": 2,
+    "logged_at": 1787063400000
+   },
+   {
+    "day": "2026-08-19",
+    "level": 2,
+    "logged_at": 1787149800000
+   },
+   {
+    "day": "2026-08-20",
+    "level": 3,
+    "logged_at": 1787236200000
+   },
+   {
+    "day": "2026-08-21",
+    "level": 4,
+    "logged_at": 1787322600000
+   },
+   {
+    "day": "2026-08-22",
+    "level": 3,
+    "logged_at": 1787409000000
+   },
+   {
+    "day": "2026-08-23",
+    "level": 3,
+    "logged_at": 1787495400000
+   },
+   {
+    "day": "2026-08-24",
+    "level": 3,
+    "logged_at": 1787581800000
+   },
+   {
+    "day": "2026-08-25",
+    "level": 3,
+    "logged_at": 1787668200000
+   },
+   {
+    "day": "2026-08-26",
+    "level": 2,
+    "logged_at": 1787754600000
+   },
+   {
+    "day": "2026-08-27",
+    "level": 4,
+    "logged_at": 1787841000000
+   },
+   {
+    "day": "2026-08-28",
+    "level": 3,
+    "logged_at": 1787927400000
+   },
+   {
+    "day": "2026-08-29",
+    "level": 4,
+    "logged_at": 1788013800000
+   },
+   {
+    "day": "2026-08-30",
+    "level": 4,
+    "logged_at": 1788100200000
+   },
+   {
+    "day": "2026-08-31",
+    "level": 3,
+    "logged_at": 1788186600000
+   },
+   {
+    "day": "2026-09-01",
+    "level": 3,
+    "logged_at": 1788273000000
+   },
+   {
+    "day": "2026-09-02",
+    "level": 3,
+    "logged_at": 1788359400000
+   },
+   {
+    "day": "2026-09-03",
+    "level": 4,
+    "logged_at": 1788445800000
+   },
+   {
+    "day": "2026-09-04",
+    "level": 5,
+    "logged_at": 1788532200000
+   },
+   {
+    "day": "2026-09-05",
+    "level": 5,
+    "logged_at": 1788618600000
+   },
+   {
+    "day": "2026-09-06",
+    "level": 4,
+    "logged_at": 1788705000000
+   },
+   {
+    "day": "2026-09-07",
+    "level": 4,
+    "logged_at": 1788791400000
+   },
+   {
+    "day": "2026-09-08",
+    "level": 5,
+    "logged_at": 1788877800000
+   },
+   {
+    "day": "2026-09-09",
+    "level": 4,
+    "logged_at": 1788964200000
+   },
+   {
+    "day": "2026-09-10",
+    "level": 3,
+    "logged_at": 1789050600000
+   },
+   {
+    "day": "2026-09-11",
+    "level": 4,
+    "logged_at": 1789137000000
+   },
+   {
+    "day": "2026-09-12",
+    "level": 4,
+    "logged_at": 1789223400000
+   },
+   {
+    "day": "2026-09-13",
+    "level": 2,
+    "logged_at": 1789309800000
+   },
+   {
+    "day": "2026-09-14",
+    "level": 3,
+    "logged_at": 1789396200000
+   },
+   {
+    "day": "2026-09-15",
+    "level": 3,
+    "logged_at": 1789482600000
+   },
+   {
+    "day": "2026-09-16",
+    "level": 3,
+    "logged_at": 1789569000000
+   },
+   {
+    "day": "2026-09-17",
+    "level": 3,
+    "logged_at": 1789655400000
+   },
+   {
+    "day": "2026-09-19",
+    "level": 3,
+    "logged_at": 1789828200000
+   },
+   {
+    "day": "2026-09-20",
+    "level": 2,
+    "logged_at": 1789914600000
+   },
+   {
+    "day": "2026-09-21",
+    "level": 5,
+    "logged_at": 1790001000000
+   },
+   {
+    "day": "2026-09-22",
+    "level": 4,
+    "logged_at": 1790087400000
+   },
+   {
+    "day": "2026-09-23",
+    "level": 2,
+    "logged_at": 1790173800000
+   },
+   {
+    "day": "2026-09-24",
+    "level": 4,
+    "logged_at": 1790260200000
+   },
+   {
+    "day": "2026-09-25",
+    "level": 4,
+    "logged_at": 1790346600000
+   },
+   {
+    "day": "2026-09-26",
+    "level": 3,
+    "logged_at": 1790433000000
+   },
+   {
+    "day": "2026-09-27",
+    "level": 2,
+    "logged_at": 1790519400000
+   },
+   {
+    "day": "2026-09-29",
+    "level": 3,
+    "logged_at": 1790692200000
+   },
+   {
+    "day": "2026-09-30",
+    "level": 4,
+    "logged_at": 1790778600000
+   },
+   {
+    "day": "2026-10-01",
+    "level": 4,
+    "logged_at": 1790865000000
+   },
+   {
+    "day": "2026-10-02",
+    "level": 3,
+    "logged_at": 1790951400000
+   },
+   {
+    "day": "2026-10-05",
+    "level": 3,
+    "logged_at": 1791210600000
+   },
+   {
+    "day": "2026-10-06",
+    "level": 4,
+    "logged_at": 1791297000000
+   },
+   {
+    "day": "2026-10-07",
+    "level": 4,
+    "logged_at": 1791383400000
+   },
+   {
+    "day": "2026-10-08",
+    "level": 3,
+    "logged_at": 1791469800000
+   },
+   {
+    "day": "2026-10-09",
+    "level": 3,
+    "logged_at": 1791556200000
+   },
+   {
+    "day": "2026-10-10",
+    "level": 2,
+    "logged_at": 1791642600000
+   },
+   {
+    "day": "2026-10-11",
+    "level": 3,
+    "logged_at": 1791729000000
+   },
+   {
+    "day": "2026-10-13",
+    "level": 5,
+    "logged_at": 1791901800000
+   },
+   {
+    "day": "2026-10-14",
+    "level": 3,
+    "logged_at": 1791988200000
+   },
+   {
+    "day": "2026-10-15",
+    "level": 4,
+    "logged_at": 1792074600000
+   },
+   {
+    "day": "2026-10-16",
+    "level": 3,
+    "logged_at": 1792161000000
+   },
+   {
+    "day": "2026-10-17",
+    "level": 3,
+    "logged_at": 1792247400000
+   },
+   {
+    "day": "2026-10-18",
+    "level": 4,
+    "logged_at": 1792333800000
+   },
+   {
+    "day": "2026-10-19",
+    "level": 3,
+    "logged_at": 1792420200000
+   },
+   {
+    "day": "2026-10-20",
+    "level": 3,
+    "logged_at": 1792506600000
+   },
+   {
+    "day": "2026-10-21",
+    "level": 4,
+    "logged_at": 1792593000000
+   },
+   {
+    "day": "2026-10-22",
+    "level": 3,
+    "logged_at": 1792679400000
+   },
+   {
+    "day": "2026-10-23",
+    "level": 5,
+    "logged_at": 1792765800000
+   },
+   {
+    "day": "2026-10-24",
+    "level": 4,
+    "logged_at": 1792812600000
+   }
+  ],
+  "notes": [
+   {
+    "day": "2026-06-27",
+    "body": "{{15:00}} Lunch with A, then back to the bug. Good day overall.",
+    "updated_at": 1782577800000
+   },
+   {
+    "day": "2026-06-29",
+    "body": "{{08:25}} Wrote the first draft of the post. It is bad, which is the point of a first draft.\n{{13:40}} Gym, legs are gone. Stairs are going to hurt tomorrow.",
+    "updated_at": 1782750600000
+   },
+   {
+    "day": "2026-07-04",
+    "body": "{{16:55}} Lunch with A, then back to the bug. Good day overall.\n{{18:25}} Wrote the first draft of the post. It is bad, which is the point of a first draft.",
+    "updated_at": 1783182600000
+   },
+   {
+    "day": "2026-07-16",
+    "body": "{{13:25}} Gym, legs are gone. Stairs are going to hurt tomorrow.\n{{15:25}} Lunch with A, then back to the bug. Good day overall.",
+    "updated_at": 1784219400000
+   },
+   {
+    "day": "2026-07-20",
+    "body": "{{14:25}} Wrote the first draft of the post. It is bad, which is the point of a first draft.",
+    "updated_at": 1784565000000
+   },
+   {
+    "day": "2026-07-24",
+    "body": "{{13:55}} Short day. Did the one thing that mattered and stopped.",
+    "updated_at": 1784910600000
+   },
+   {
+    "day": "2026-07-25",
+    "body": "{{17:25}} Read for an hour on the bus. The second half of the book is better than the first.\n{{18:55}} Gym, legs are gone. Stairs are going to hurt tomorrow.",
+    "updated_at": 1784997000000
+   },
+   {
+    "day": "2026-07-28",
+    "body": "{{08:00}} Called home. Mum says the monsoon is late again.",
+    "updated_at": 1785256200000
+   },
+   {
+    "day": "2026-08-08",
+    "body": "{{13:55}} Woke up slow, coffee first. Finally cracked the sliding window problem after trying brute force first.\n{{20:25}} Woke up slow, coffee first. Finally cracked the sliding window problem after trying brute force first.",
+    "updated_at": 1786206600000
+   },
+   {
+    "day": "2026-08-10",
+    "body": "{{13:12}} Lunch with A, then back to the bug. Good day overall.\n{{13:25}} Lunch with A, then back to the bug. Good day overall.",
+    "updated_at": 1786379400000
+   },
+   {
+    "day": "2026-08-13",
+    "body": "{{16:12}} Short day. Did the one thing that mattered and stopped.",
+    "updated_at": 1786638600000
+   },
+   {
+    "day": "2026-08-18",
+    "body": "{{16:00}} Tired. Skipped the evening walk, will do two tomorrow.",
+    "updated_at": 1787070600000
+   },
+   {
+    "day": "2026-08-21",
+    "body": "{{20:40}} Bug in the parser, it was one missing case. Fixed, written a test, moving on.",
+    "updated_at": 1787329800000
+   },
+   {
+    "day": "2026-08-26",
+    "body": "{{14:00}} Rain all day. Stayed in, tidied the desk, cooked properly for once.\n{{18:40}} Tired. Skipped the evening walk, will do two tomorrow.",
+    "updated_at": 1787761800000
+   },
+   {
+    "day": "2026-08-28",
+    "body": "{{10:25}} Short day. Did the one thing that mattered and stopped.\n{{16:25}} Short day. Did the one thing that mattered and stopped.",
+    "updated_at": 1787934600000
+   },
+   {
+    "day": "2026-08-31",
+    "body": "{{11:55}} Bug in the parser, it was one missing case. Fixed, written a test, moving on.\n{{18:12}} Gym, legs are gone. Stairs are going to hurt tomorrow.",
+    "updated_at": 1788193800000
+   },
+   {
+    "day": "2026-09-03",
+    "body": "{{12:40}} Called home. Mum says the monsoon is late again.\n{{20:25}} Tired. Skipped the evening walk, will do two tomorrow.",
+    "updated_at": 1788453000000
+   },
+   {
+    "day": "2026-09-08",
+    "body": "{{20:25}} Lunch with A, then back to the bug. Good day overall.",
+    "updated_at": 1788885000000
+   },
+   {
+    "day": "2026-09-09",
+    "body": "{{19:12}} Read for an hour on the bus. The second half of the book is better than the first.",
+    "updated_at": 1788971400000
+   },
+   {
+    "day": "2026-09-13",
+    "body": "{{13:55}} Bug in the parser, it was one missing case. Fixed, written a test, moving on.",
+    "updated_at": 1789317000000
+   },
+   {
+    "day": "2026-09-17",
+    "body": "{{13:55}} Read for an hour on the bus. The second half of the book is better than the first.",
+    "updated_at": 1789662600000
+   },
+   {
+    "day": "2026-09-25",
+    "body": "{{19:00}} Short day. Did the one thing that mattered and stopped.",
+    "updated_at": 1790353800000
+   },
+   {
+    "day": "2026-09-27",
+    "body": "{{15:12}} Gym, legs are gone. Stairs are going to hurt tomorrow.",
+    "updated_at": 1790526600000
+   },
+   {
+    "day": "2026-10-02",
+    "body": "{{09:25}} Called home. Mum says the monsoon is late again.\n{{10:00}} Rain all day. Stayed in, tidied the desk, cooked properly for once.",
+    "updated_at": 1790958600000
+   },
+   {
+    "day": "2026-10-05",
+    "body": "{{15:25}} Gym, legs are gone. Stairs are going to hurt tomorrow.",
+    "updated_at": 1791217800000
+   },
+   {
+    "day": "2026-10-06",
+    "body": "{{16:25}} Called home. Mum says the monsoon is late again.",
+    "updated_at": 1791304200000
+   },
+   {
+    "day": "2026-10-08",
+    "body": "{{15:00}} Woke up slow, coffee first. Finally cracked the sliding window problem after trying brute force first.",
+    "updated_at": 1791477000000
+   },
+   {
+    "day": "2026-10-10",
+    "body": "{{09:40}} Short day. Did the one thing that mattered and stopped.\n{{18:40}} Tired. Skipped the evening walk, will do two tomorrow.",
+    "updated_at": 1791649800000
+   },
+   {
+    "day": "2026-10-11",
+    "body": "{{12:55}} Short day. Did the one thing that mattered and stopped.",
+    "updated_at": 1791736200000
+   },
+   {
+    "day": "2026-10-16",
+    "body": "{{12:40}} Short day. Did the one thing that mattered and stopped.\n{{19:25}} Wrote the first draft of the post. It is bad, which is the point of a first draft.",
+    "updated_at": 1792168200000
+   },
+   {
+    "day": "2026-10-18",
+    "body": "{{17:25}} Rain all day. Stayed in, tidied the desk, cooked properly for once.",
+    "updated_at": 1792341000000
+   },
+   {
+    "day": "2026-10-20",
+    "body": "{{10:40}} Wrote the first draft of the post. It is bad, which is the point of a first draft.\n{{18:55}} Lunch with A, then back to the bug. Good day overall.",
+    "updated_at": 1792513800000
+   },
+   {
+    "day": "2026-10-24",
+    "updated_at": 1792852200000,
+    "body": "{{07:40}} Woke up slow, coffee first.\n{{13:05}} Called the bank about the card, sorted.\n{{16:05}} Gym, legs are gone. Reading on the bus later."
+   }
+  ],
+  "settings": [
+   {
+    "key": "name",
+    "value": "Kai"
+   },
+   {
+    "key": "mode",
+    "value": "system"
+   },
+   {
+    "key": "accent",
+    "value": "moss"
+   },
+   {
+    "key": "textSize",
+    "value": "M"
+   },
+   {
+    "key": "dayStart",
+    "value": "06:00"
+   },
+   {
+    "key": "lineEnd",
+    "value": "02:00"
+   },
+   {
+    "key": "newDayAt",
+    "value": "04:00"
+   },
+   {
+    "key": "weekStart",
+    "value": "monday"
+   },
+   {
+    "key": "remindTasks",
+    "value": "1"
+   },
+   {
+    "key": "nudgeOn",
+    "value": "0"
+   },
+   {
+    "key": "nudgeAt",
+    "value": "21:30"
+   },
+   {
+    "key": "onboarded",
+    "value": "1"
+   },
+   {
+    "key": "tipDismissed",
+    "value": "1"
+   }
+  ],
+  "tasks": [
+   {
+    "id": 1,
+    "title": "Order the book",
+    "goal_id": null,
+    "due_day": "2026-10-15",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1792051200000,
+    "done_day": "2026-10-15",
+    "position": 0,
+    "created_at": 1791775800000,
+    "next_id": null
+   },
+   {
+    "id": 2,
+    "title": "Call the bank",
+    "goal_id": null,
+    "due_day": "2026-09-09",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1788957000000,
+    "done_day": "2026-09-09",
+    "position": 1,
+    "created_at": 1788665400000,
+    "next_id": null
+   },
+   {
+    "id": 3,
+    "title": "Renew the library card",
+    "goal_id": null,
+    "due_day": "2026-09-29",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1790660700000,
+    "done_day": "2026-09-29",
+    "position": 2,
+    "created_at": 1790393400000,
+    "next_id": null
+   },
+   {
+    "id": 4,
+    "title": "Send the form",
+    "goal_id": null,
+    "due_day": "2026-10-01",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1790835300000,
+    "done_day": "2026-10-01",
+    "position": 3,
+    "created_at": 1790566200000,
+    "next_id": null
+   },
+   {
+    "id": 5,
+    "title": "Clean the desk",
+    "goal_id": null,
+    "due_day": "2026-09-18",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1789723800000,
+    "done_day": "2026-09-18",
+    "position": 4,
+    "created_at": 1789443000000,
+    "next_id": null
+   },
+   {
+    "id": 6,
+    "title": "Send the form",
+    "goal_id": null,
+    "due_day": "2026-09-16",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1789545600000,
+    "done_day": "2026-09-16",
+    "position": 5,
+    "created_at": 1789270200000,
+    "next_id": null
+   },
+   {
+    "id": 7,
+    "title": "Book the dentist",
+    "goal_id": null,
+    "due_day": "2026-10-11",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1791693000000,
+    "done_day": "2026-10-11",
+    "position": 6,
+    "created_at": 1791430200000,
+    "next_id": null
+   },
+   {
+    "id": 8,
+    "title": "Renew the library card",
+    "goal_id": null,
+    "due_day": "2026-08-26",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1787737500000,
+    "done_day": "2026-08-26",
+    "position": 7,
+    "created_at": 1787455800000,
+    "next_id": null
+   },
+   {
+    "id": 9,
+    "title": "Fix the bike light",
+    "goal_id": null,
+    "due_day": "2026-08-31",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1788172200000,
+    "done_day": "2026-08-31",
+    "position": 8,
+    "created_at": 1787887800000,
+    "next_id": null
+   },
+   {
+    "id": 10,
+    "title": "Back up the laptop",
+    "goal_id": null,
+    "due_day": "2026-10-22",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1792647900000,
+    "done_day": "2026-10-22",
+    "position": 9,
+    "created_at": 1792380600000,
+    "next_id": null
+   },
+   {
+    "id": 11,
+    "title": "Order the book",
+    "goal_id": null,
+    "due_day": "2026-09-07",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1788782400000,
+    "done_day": "2026-09-07",
+    "position": 10,
+    "created_at": 1788492600000,
+    "next_id": null
+   },
+   {
+    "id": 12,
+    "title": "Clean the desk",
+    "goal_id": null,
+    "due_day": "2026-09-05",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1788589800000,
+    "done_day": "2026-09-05",
+    "position": 11,
+    "created_at": 1788319800000,
+    "next_id": null
+   },
+   {
+    "id": 13,
+    "title": "Renew the library card",
+    "goal_id": null,
+    "due_day": "2026-09-25",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1790329500000,
+    "done_day": "2026-09-25",
+    "position": 12,
+    "created_at": 1790047800000,
+    "next_id": null
+   },
+   {
+    "id": 14,
+    "title": "Reply to A",
+    "goal_id": null,
+    "due_day": "2026-10-03",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1791029700000,
+    "done_day": "2026-10-03",
+    "position": 13,
+    "created_at": 1790739000000,
+    "next_id": null
+   },
+   {
+    "id": 15,
+    "title": "Renew the library card",
+    "goal_id": null,
+    "due_day": "2026-09-19",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1789823700000,
+    "done_day": "2026-09-19",
+    "position": 14,
+    "created_at": 1789529400000,
+    "next_id": null
+   },
+   {
+    "id": 16,
+    "title": "Reply to A",
+    "goal_id": null,
+    "due_day": "2026-09-24",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1790227800000,
+    "done_day": "2026-09-24",
+    "position": 15,
+    "created_at": 1789961400000,
+    "next_id": null
+   },
+   {
+    "id": 17,
+    "title": "Back up the laptop",
+    "goal_id": null,
+    "due_day": "2026-09-04",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1788524100000,
+    "done_day": "2026-09-04",
+    "position": 16,
+    "created_at": 1788233400000,
+    "next_id": null
+   },
+   {
+    "id": 18,
+    "title": "Renew the library card",
+    "goal_id": null,
+    "due_day": "2026-09-21",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": 1789992900000,
+    "done_day": "2026-09-21",
+    "position": 17,
+    "created_at": 1789702200000,
+    "next_id": null
+   },
+   {
+    "id": 19,
+    "title": "Call the bank",
+    "goal_id": null,
+    "due_day": "2026-10-24",
+    "due_time": "13:00",
+    "remind_offset_min": 10,
+    "repeat": "never",
+    "done_at": 1792827120000,
+    "done_day": "2026-10-24",
+    "position": 18,
+    "created_at": 1792553400000,
+    "next_id": null
+   },
+   {
+    "id": 20,
+    "title": "Call home",
+    "goal_id": null,
+    "due_day": "2026-10-24",
+    "due_time": "21:00",
+    "remind_offset_min": 10,
+    "repeat": "never",
+    "done_at": null,
+    "done_day": null,
+    "position": 19,
+    "created_at": 1792553400000,
+    "next_id": null
+   },
+   {
+    "id": 21,
+    "title": "Reply to A",
+    "goal_id": null,
+    "due_day": "2026-10-24",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": null,
+    "done_day": null,
+    "position": 20,
+    "created_at": 1792553400000,
+    "next_id": null
+   },
+   {
+    "id": 22,
+    "title": "Take out the bins",
+    "goal_id": null,
+    "due_day": "2026-10-25",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "weekly",
+    "done_at": null,
+    "done_day": null,
+    "position": 21,
+    "created_at": 1792639800000,
+    "next_id": null
+   },
+   {
+    "id": 23,
+    "title": "Write the parser tests",
+    "goal_id": 3,
+    "due_day": "2026-10-26",
+    "due_time": null,
+    "remind_offset_min": null,
+    "repeat": "never",
+    "done_at": null,
+    "done_day": null,
+    "position": 22,
+    "created_at": 1792726200000,
+    "next_id": null
+   },
+   {
+    "id": 24,
+    "title": "Book the dentist",
+    "goal_id": null,
+    "due_day": "2026-10-28",
+    "due_time": "10:00",
+    "remind_offset_min": 60,
+    "repeat": "never",
+    "done_at": null,
+    "done_day": null,
+    "position": 23,
+    "created_at": 1792899000000,
+    "next_id": null
+   }
+  ]
+ }
+}

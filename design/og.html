@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- Source for site/img/og.png (1200 x 630). Open it at 1200 x 630 and take a screenshot; it uses the site's own tokens and font.
+     Swap the phone for a real screenshot when there is one. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>og image</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300..800&amp;display=swap">
+<link rel="stylesheet" href="../site/styles.css">
+<style>
+  html { scroll-behavior: auto; }
+  body { width: 1200px; height: 630px; overflow: hidden; position: relative; transition: none; }
+  .brand-row { position: absolute; left: 72px; top: 64px; display: flex; align-items: center; gap: 20px; }
+  .brand-row .mark { transform: scale(2); transform-origin: left center; margin-right: 22px; }
+  .brand-row b { font-size: 44px; letter-spacing: -1px; }
+  .lines { position: absolute; left: 72px; top: 196px; }
+  .lines h1 { font-size: 118px; line-height: 1.02; }
+  .lines .hdot { animation: none; }
+  .lines p { margin: 30px 0 0; font-size: 30px; color: var(--ink2); }
+  .og-phone { position: absolute; left: 812px; top: 78px; width: 300px; transform: rotate(5deg); }
+  .og-phone .phone { transition: none; }
+  .og-phone .phone:hover { transform: none; }
+</style>
+</head>
+<body>
+  <div class="brand-row"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><b>notes</b></div>
+  <div class="lines">
+    <h1>Every day<br>is a dot<span class="hdot" aria-hidden="true"></span></h1>
+    <p>a journal for your phone · free, for Android</p>
+  </div>
+  <div class="og-phone"><div class="phone"><img src="../site/img/quiet-today-light.webp" alt=""></div></div>
+</body>
+</html>
