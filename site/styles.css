@@ -167,7 +167,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-o
 .hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 56px clamp(56px, 7vw, 104px); padding-top: clamp(28px, 5vw, 64px); padding-bottom: clamp(64px, 8vw, 112px); }
 .hero-text { flex: 0 1 560px; min-width: 0; }
 @media (max-width: 1040px) { .hero-text { flex: 1 1 100%; } }
-@media (min-width: 1041px) { .hero-text { align-self: flex-start; padding-top: 28px; } }
+@media (min-width: 1041px) { .hero-text { align-self: flex-start; padding-top: 4px; } }
 .label { margin: 0 0 20px; font-size: 14px; color: var(--ink2); }
 h1 { margin: 0; font-size: clamp(54px, 8.4vw, 128px); line-height: 1.02; font-weight: 700; letter-spacing: -0.04em; text-wrap: balance; }
 .w { display: inline-block; animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; }
